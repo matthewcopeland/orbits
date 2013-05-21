@@ -1,0 +1,35 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+html, body {
+  min-height: 100%;
+  width: 100%; }
+
+ol, ul {
+  list-style: none;
+  list-style-position: inside; }
+
+.night-sky {
+  background-color: #070d10;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #070d10), color-stop(100%, #162934));
+  background-image: -webkit-linear-gradient(top, #070d10 70%, #162934);
+  background-image: linear-gradient(to bottom,#070d10 70%, #162934);
+  background-attachment: fixed; }
+
+#earth {
+  display: block;
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  left: 50%;
+  margin-left: -300px;
+  bottom: -360px;
+  border-radius: 300px;
+  border-radius: 300px;
+  background-color: #006fab;
+  box-shadow: 0 -100px 300px 0 rgba(52, 98, 124, 0.4); }

@@ -1,0 +1,4 @@
+.night-sky {
+  @include linear-gradient(top, darken($blackblue, 10) 70%, $blackblue);
+  background-attachment: fixed;
+}

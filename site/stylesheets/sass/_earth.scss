@@ -1,0 +1,14 @@
+$earth-size: 600px;
+$earth-vertical-offset: ($earth-size*0.6);
+$earth-visible-height: $earth-size - $earth-vertical-offset;
+
+#earth {
+  display: block;
+  @include size($earth-size);
+  position: fixed;
+  @include horizontal-center($earth-size);
+  bottom: -$earth-vertical-offset;
+  @include border-radius( $earth-size/2 );
+  background-color: $darkblue;
+  box-shadow: 0 (-$earth-size/6) $earth-size/2 0 rgba(lighten($blackblue, 20), 0.4);
+}

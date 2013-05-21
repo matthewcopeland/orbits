@@ -1,0 +1,17 @@
+@mixin vertical-middle($size) {
+  top: 50%;
+  margin-top: -$size/2;
+}
+
+@mixin horizontal-center($size) {
+  left: 50%;
+  margin-left: -$size/2;
+}
+
+@mixin fill($position:absolute) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
