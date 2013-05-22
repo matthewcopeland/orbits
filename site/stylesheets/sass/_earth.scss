@@ -9,6 +9,13 @@ $earth-vertical-offset: ($earth-size*0.6);
 $earth-visible-height: $earth-size - $earth-vertical-offset;
 
 
+// rising earth
+@-webkit-keyframes rising-earth {
+  from {
+    @include transform( translateY(100%) );
+  }
+}
+
 
 #earth {
   display: block;
@@ -19,7 +26,9 @@ $earth-visible-height: $earth-size - $earth-vertical-offset;
   @include border-radius( $earth-size/2 );
   background-color: $darkblue;
   box-shadow: $earth-outter-glow, $earth-inset-shadow;
-  @include transition-property(transform);
-  @include transition-duration(1s);
+  @include animation( rising-earth 3s linear );
+  // @include transition-property(transform);
+  // @include transition-duration(1s);
 }
+
 

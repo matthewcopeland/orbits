@@ -21,6 +21,14 @@ ol, ul {
   background-image: linear-gradient(to bottom,#070d10 70%, #162934);
   background-attachment: fixed; }
 
+@-webkit-keyframes rising-earth {
+  from {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%); } }
+
 #earth {
   display: block;
   width: 600px;
@@ -34,9 +42,6 @@ ol, ul {
   border-radius: 300px;
   background-color: #006fab;
   box-shadow: 0 -100px 300px 0 rgba(52, 98, 124, 0.4), inset -30px -30px 60px 0 rgba(0, 0, 0, 0.6);
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  transition-duration: 1s; }
+  -webkit-animation: rising-earth 3s linear;
+  -moz-animation: rising-earth 3s linear;
+  animation: rising-earth 3s linear; }
