@@ -174,17 +174,11 @@ $moon-orbit-duration: 6s;
 ### Result
 
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-01.jpg)
-
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-02.jpg)
-
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-03.jpg)
-
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-04.jpg)
-
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-05.jpg)
-
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-06.jpg)
-
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-07.jpg)
 
 
