@@ -36,7 +36,7 @@ To center the element horizontally, I've made a small utility that accepts a `$s
 
 Now it's nice and easy to change the size of the planet.
 
-![ScreenShot](https://github.com/matthewcopeland/orbits/screenshots/01.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/screenshots/01.png)
 
 ### Rising earth - animation
 
