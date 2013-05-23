@@ -1,12 +1,17 @@
 $earth-size: 600px;
 
+
+
 // shadows
 $earth-outter-glow: 0 (-$earth-size/6) $earth-size/2 0 rgba(lighten($blackblue, 20), 0.4);
 $earth-inset-shadow: inset (-$earth-size/20) (-$earth-size/20) $earth-size/10 0 rgba(0,0,0, 0.6);
 
+
+
 // offsets for animations
 $earth-vertical-offset: ($earth-size*0.6);
 $earth-visible-height: $earth-size - $earth-vertical-offset;
+
 
 
 // rising earth
@@ -15,6 +20,7 @@ $earth-visible-height: $earth-size - $earth-vertical-offset;
     @include transform( translateY(100%) );
   }
 }
+
 
 
 #earth {
@@ -27,8 +33,6 @@ $earth-visible-height: $earth-size - $earth-vertical-offset;
   background-color: $darkblue;
   box-shadow: $earth-outter-glow, $earth-inset-shadow;
   @include animation( rising-earth 3s linear );
-  // @include transition-property(transform);
-  // @include transition-duration(1s);
 }
 
 

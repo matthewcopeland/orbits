@@ -36,12 +36,14 @@ To center the element horizontally, I've made a small utility that accepts a `$s
 
 Now it's nice and easy to change the size of the planet.
 
-
+![ScreenShot](https://github.com/matthewcopeland/orbits/screenshots/01.png)
 
 ### Rising earth - animation
 
 #### What to animate?
+* Position, gradient and glow.
 We know that we want the earth to rise from the bottom of the screen to the center of the screen.
+
 
 #### How to animate?
 We're going to accomplish this with css `translate` so that we can get optimize the rendering. Paul Irish on the benefits of animating with translate. http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft.
