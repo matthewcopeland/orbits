@@ -42,18 +42,21 @@ Now it's nice and easy to change the size of the planet.
 ### Rising earth - animation
 
 #### What to animate?
-* Position, gradient and glow.
-We know that we want the earth to rise from the bottom of the screen to the center of the screen.
+Position, gradient and glow.
 
 
-#### How to animate?
-We're going to accomplish this with css `translate` so that we can get optimize the rendering. Paul Irish on the benefits of animating with translate. http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft.
 
+For each animation, the `animation-duration` should be extacted into a variable. This will be beneficial when it comes time to sync a few of them up.
 
-I will need to know the height of the visible part of the earth.  So we'll calculate the distance of the earth's vertical-offset.  We will now be able to find the visibile height of the earth - this will be useful in a moment.
+##### Position
+We know that we want the earth to rise from the bottom of the screen to the center of the screen. The earth's resting place is already in the center of our screen. So we only need to move it `from` another position. See [Lea Varou's article on single-keyframe animations](http://lea.verou.me/2012/12/animations-with-one-keyframe).
+
+We'll accomplish this with css `translate` so that we can get optimize the rendering. See [Paul Irish's article on translate v pos-abs](http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft).
+
 
 
 
 ## References
-* Paul Irish on the benefits of animating with translate. http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft.
-* Paul Hayes' 3D css sphere http://www.paulrhayes.com/2011-02/creating-a-sphere-with-3d-css.
+* Paul Irish on the benefits of animating with translate. http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft
+* Lea Verou's animation's with one keyframe. http://lea.verou.me/2012/12/animations-with-one-keyframe
+* Paul Hayes' 3D css sphere http://www.paulrhayes.com/2011-02/creating-a-sphere-with-3d-css

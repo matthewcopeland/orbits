@@ -1,23 +1,18 @@
 $earth-size: 600px;
 
-
+$earth-glow-color: rgba(lighten($blackblue, 20), 0.4);
 
 // shadows
-$earth-outter-glow: 0 (-$earth-size/6) $earth-size/2 0 rgba(lighten($blackblue, 20), 0.4);
+$earth-outter-glow-rise: 0 (-$earth-size/6) $earth-size/2 0 $earth-glow-color;
+$earth-outter-glow: 0 (-$earth-size/10) $earth-size/4 0 $earth-glow-color;
 $earth-inset-shadow: inset (-$earth-size/20) (-$earth-size/20) $earth-size/10 0 rgba(0,0,0, 0.6);
 
 
-
-// offsets for animations
-$earth-vertical-offset: ($earth-size*0.6);
-$earth-visible-height: $earth-size - $earth-vertical-offset;
-
-
-
 // rising earth
-@-webkit-keyframes rising-earth {
+$rising-earth-duration: 4s;
+@include keyframes(rising-earth) {
   from {
-    @include transform( translateY(100%) );
+    @include transform(translateY(150%));
   }
 }
 
@@ -32,7 +27,7 @@ $earth-visible-height: $earth-size - $earth-vertical-offset;
   @include border-radius( $earth-size/2 );
   background-color: $darkblue;
   box-shadow: $earth-outter-glow, $earth-inset-shadow;
-  @include animation( rising-earth 3s linear );
+  @include animation( rising-earth $rising-earth-duration linear );
 }
 
 

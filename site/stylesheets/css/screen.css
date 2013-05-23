@@ -7,8 +7,9 @@
   font-weight: normal; }
 
 html, body {
-  min-height: 100%;
-  width: 100%; }
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
 
 ol, ul {
   list-style: none;
@@ -23,11 +24,19 @@ ol, ul {
 
 @-webkit-keyframes rising-earth {
   from {
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%); } }
+    -webkit-transform: translateY(150%); } }
+
+@-moz-keyframes rising-earth {
+  from {
+    -moz-transform: translateY(150%); } }
+
+@-o-keyframes rising-earth {
+  from {
+    -o-transform: translateY(150%); } }
+
+@keyframes rising-earth {
+  from {
+    transform: translateY(150%); } }
 
 #earth {
   display: block;
@@ -41,7 +50,7 @@ ol, ul {
   border-radius: 300px;
   border-radius: 300px;
   background-color: #006fab;
-  box-shadow: 0 -100px 300px 0 rgba(52, 98, 124, 0.4), inset -30px -30px 60px 0 rgba(0, 0, 0, 0.6);
-  -webkit-animation: rising-earth 3s linear;
-  -moz-animation: rising-earth 3s linear;
-  animation: rising-earth 3s linear; }
+  box-shadow: 0 -60px 150px 0 rgba(52, 98, 124, 0.4), inset -30px -30px 60px 0 rgba(0, 0, 0, 0.6);
+  -webkit-animation: rising-earth 4s linear;
+  -moz-animation: rising-earth 4s linear;
+  animation: rising-earth 4s linear; }
