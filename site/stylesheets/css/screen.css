@@ -39,18 +39,27 @@ ol, ul {
     transform: translateY(150%); } }
 
 #earth {
-  display: block;
-  width: 600px;
-  height: 600px;
   position: fixed;
+  display: block;
+  height: 600px;
+  width: 600px;
+  border-radius: 300px;
+  border-radius: 300px;
   left: 50%;
   margin-left: -300px;
   top: 50%;
   margin-top: -300px;
-  border-radius: 300px;
-  border-radius: 300px;
   background-color: #006fab;
-  box-shadow: 0 -60px 150px 0 rgba(52, 98, 124, 0.4), inset -30px -30px 60px 0 rgba(0, 0, 0, 0.6);
-  -webkit-animation: rising-earth 4s linear;
-  -moz-animation: rising-earth 4s linear;
-  animation: rising-earth 4s linear; }
+  box-shadow: 0 -60px 150px 0 rgba(52, 98, 124, 0.4), inset -30px -30px 60px 0 rgba(0, 0, 0, 0.6); }
+
+#moon {
+  position: fixed;
+  display: block;
+  height: 162px;
+  width: 162px;
+  border-radius: 81px;
+  border-radius: 81px;
+  box-shadow: inset -8.1px -8.1px 16.2px 0 rgba(0, 0, 0, 0.6);
+  top: 20px;
+  left: 20px;
+  background: #f1f1f1; }

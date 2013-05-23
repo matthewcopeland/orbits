@@ -3,9 +3,8 @@ $earth-size: 600px;
 $earth-glow-color: rgba(lighten($blackblue, 20), 0.4);
 
 // shadows
-$earth-outter-glow-rise: 0 (-$earth-size/6) $earth-size/2 0 $earth-glow-color;
+// $earth-outter-glow-rise: 0 (-$earth-size/6) $earth-size/2 0 $earth-glow-color;
 $earth-outter-glow: 0 (-$earth-size/10) $earth-size/4 0 $earth-glow-color;
-$earth-inset-shadow: inset (-$earth-size/20) (-$earth-size/20) $earth-size/10 0 rgba(0,0,0, 0.6);
 
 
 // rising earth
@@ -19,15 +18,13 @@ $rising-earth-duration: 4s;
 
 
 #earth {
-  display: block;
-  @include size($earth-size);
   position: fixed;
+  @include circle($earth-size);
   @include horizontal-center($earth-size);
   @include vertical-middle($earth-size);
-  @include border-radius( $earth-size/2 );
   background-color: $darkblue;
-  box-shadow: $earth-outter-glow, $earth-inset-shadow;
-  @include animation( rising-earth $rising-earth-duration linear );
+  box-shadow: $earth-outter-glow, sphere-inset-shadow($earth-size);
+  // @include animation( rising-earth $rising-earth-duration linear );
 }
 
 

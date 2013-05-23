@@ -1,0 +1,10 @@
+$moon-size: $earth-size*0.27;
+$moon-bg-color: $offwhite;
+
+#moon {
+  position: fixed;
+  @include sphere($moon-size);
+  top: 20px;
+  left: 20px;
+  background: $moon-bg-color;
+}
