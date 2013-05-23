@@ -1,9 +1,6 @@
 // making planets a little bit at a time.
 
 
-// first you must make a circle.
-// we'll keep this seperate for easy reuse.
-
 @mixin circle($size) {
   display: block;
   height: $size;

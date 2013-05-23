@@ -198,6 +198,7 @@ The moon's orbit is % of the Earth's mass. So we'll replace the `translateX($ear
 
 
 ### Galactic stuff
-* http://solarsystem.nasa.gov/planets/profile.cfm?Display=Facts&Object=Moon
+* http://solarsystem.nasa.gov/planets
 * http://en.wikipedia.org/wiki/Moon
 * http://www.universetoday.com/20489/moon-compared-to-Earth
+
