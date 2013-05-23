@@ -125,17 +125,73 @@ $moon-size: $earth-size*0.27;
 
 
 ## Rising moon animation
+
+### Simple start
 For starters, the moon will be very simple.  We'll have a full-moon come out from one side of the Earth, pass in front of the Earth and then set behind the Earth.  We'll drive this with variables so that we can change it up as we gain information about the real proportions of the Earth and moon.
 
 Comment out the rising-earth animation for now so that we can work with something that isn't yet moving. We'll sync this up in a minute.
 
 
-
 Position the Moon in the center of the screen, behind the Earth. (Make center-mixin and mention the zed_index file).
 
 
+```scss
+// _moon.scss
 
-The moon's orbit is % of the Earth's mass.
+$moon-orbit-duration: 6s;
+
+@include keyframes(orbit) {
+  25% {
+    z-index: $moon-z;
+    @include transform( translateX(-$earth-size) );
+  }
+
+
+  26% { z-index: ($earth-z + 1); } // what is this doing here?
+
+
+  75% {
+    z-index: ($earth-z + 1);
+    @include transform( translateX($earth-size) );
+  }
+
+
+  76% { z-index: $moon-z; } // what is this doing?
+}
+
+
+#moon {
+  position: fixed;
+  z-index: $moon-z;
+  @include center($moon-size);
+  @include animation( orbit $moon-orbit-duration infinite linear );
+}
+
+```
+
+***
+
+### Result
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-01.jpg)
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-02.jpg)
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-03.jpg)
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-04.jpg)
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-05.jpg)
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-06.jpg)
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-07.jpg)
+
+
+***
+
+### Moon orbit - step it up with real galactic ratios
+The moon's orbit is % of the Earth's mass. So we'll replace the `translateX($earth-size)` with `translateX($moon-orbit-radius)`.
 
 
 
