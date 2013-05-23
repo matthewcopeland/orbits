@@ -53,6 +53,10 @@ The `animation-duration` should be extacted into a variable. This will be benefi
 
 
 ## The moon
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/02-earth-and-moon.png)
+
+
 ### Base `$moon-size` on `$earth-size`.
 The Moon is approximately 27% the size of the Earth. So as you guessed, we'll be using that math to create our Moon.
 
@@ -139,7 +143,7 @@ The moon's orbit is % of the Earth's mass.
 * Paul Hayes' 3D css sphere http://www.paulrhayes.com/2011-02/creating-a-sphere-with-3d-css
 
 
-### Galatic stuff
+### Galactic stuff
 * http://solarsystem.nasa.gov/planets/profile.cfm?Display=Facts&Object=Moon
 * http://en.wikipedia.org/wiki/Moon
 * http://www.universetoday.com/20489/moon-compared-to-Earth
