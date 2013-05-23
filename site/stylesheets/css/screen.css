@@ -40,6 +40,7 @@ ol, ul {
 
 #earth {
   position: fixed;
+  z-index: 2;
   display: block;
   height: 600px;
   width: 600px;
@@ -52,14 +53,80 @@ ol, ul {
   background-color: #006fab;
   box-shadow: 0 -60px 150px 0 rgba(52, 98, 124, 0.4), inset -30px -30px 60px 0 rgba(0, 0, 0, 0.6); }
 
+@-webkit-keyframes orbit {
+  25% {
+    z-index: 1;
+    -webkit-transform: translateX(-600px); }
+
+  26% {
+    z-index: 3; }
+
+  75% {
+    z-index: 3;
+    -webkit-transform: translateX(600px); }
+
+  76% {
+    z-index: 1; } }
+
+@-moz-keyframes orbit {
+  25% {
+    z-index: 1;
+    -moz-transform: translateX(-600px); }
+
+  26% {
+    z-index: 3; }
+
+  75% {
+    z-index: 3;
+    -moz-transform: translateX(600px); }
+
+  76% {
+    z-index: 1; } }
+
+@-o-keyframes orbit {
+  25% {
+    z-index: 1;
+    -o-transform: translateX(-600px); }
+
+  26% {
+    z-index: 3; }
+
+  75% {
+    z-index: 3;
+    -o-transform: translateX(600px); }
+
+  76% {
+    z-index: 1; } }
+
+@keyframes orbit {
+  25% {
+    z-index: 1;
+    transform: translateX(-600px); }
+
+  26% {
+    z-index: 3; }
+
+  75% {
+    z-index: 3;
+    transform: translateX(600px); }
+
+  76% {
+    z-index: 1; } }
+
 #moon {
   position: fixed;
+  z-index: 1;
   display: block;
   height: 162px;
   width: 162px;
   border-radius: 81px;
   border-radius: 81px;
   box-shadow: inset -8.1px -8.1px 16.2px 0 rgba(0, 0, 0, 0.6);
-  top: 20px;
-  left: 20px;
-  background: #f1f1f1; }
+  left: 50%;
+  margin-left: -81px;
+  top: 50%;
+  margin-top: -81px;
+  background: #f1f1f1;
+  -webkit-animation: orbit 6s infinite linear;
+  -moz-animation: orbit 6s infinite linear;
+  animation: orbit 6s infinite linear; }

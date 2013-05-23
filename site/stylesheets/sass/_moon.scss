@@ -1,10 +1,34 @@
 $moon-size: $earth-size*0.27;
 $moon-bg-color: $offwhite;
 
+
+$moon-orbit-duration: 6s;
+
+
+@include keyframes(orbit) {
+  25% {
+    z-index: $moon-z;
+    @include transform(translateX(-$earth-size) );
+  }
+
+  26% { z-index: ($earth-z + 1); }
+
+  75% {
+    z-index: ($earth-z + 1);
+    @include transform(translateX($earth-size) );
+  }
+
+  76% { z-index: $moon-z; }
+}
+
+
+
 #moon {
   position: fixed;
+  z-index: $moon-z;
   @include sphere($moon-size);
-  top: 20px;
-  left: 20px;
+  @include center($moon-size);
   background: $moon-bg-color;
+  @include animation( orbit $moon-orbit-duration infinite linear );
 }
+

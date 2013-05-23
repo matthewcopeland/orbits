@@ -8,6 +8,13 @@
   margin-left: -$size/2;
 }
 
+
+@mixin center($size) {
+  @include horizontal-center($size);
+  @include vertical-middle($size);
+}
+
+
 @mixin fill($position:absolute) {
   position: absolute;
   top: 0;

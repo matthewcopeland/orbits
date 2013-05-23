@@ -19,9 +19,9 @@ $rising-earth-duration: 4s;
 
 #earth {
   position: fixed;
+  z-index: $earth-z;
   @include circle($earth-size);
-  @include horizontal-center($earth-size);
-  @include vertical-middle($earth-size);
+  @include center($earth-size);
   background-color: $darkblue;
   box-shadow: $earth-outter-glow, sphere-inset-shadow($earth-size);
   // @include animation( rising-earth $rising-earth-duration linear );
