@@ -1,22 +1,19 @@
 $moon-bg-color: $offwhite;
-$moon-orbit-delay: $rising-earth-duration;
 
 
 @include keyframes(orbit) {
   25% {
     z-index: $moon-z;
-    @include transform( translateX(-$moon-orbit-diameter) );
+    @include transform( translate3d(-$moon-orbit-diameter,0,0) );
   }
 
   26% { z-index: ($earth-z + 1); }
 
-  50% {
-  }
-
+  50% { @include transform( translate3d(0,0,$moon-orbit-diameter) ); }
 
   75% {
     z-index: ($earth-z + 1);
-    @include transform( translateX($moon-orbit-diameter) );
+    @include transform( translate3d($moon-orbit-diameter,0,0) );
   }
 
   76% { z-index: $moon-z; }
@@ -26,11 +23,10 @@ $moon-orbit-delay: $rising-earth-duration;
 
 #moon {
   position: fixed;
-  z-index: $moon-z;
   @include sphere($moon-size);
   @include center($moon-size);
   background: $moon-bg-color;
+  z-index: $moon-z;
   @include animation( orbit $moon-orbit-duration infinite linear );
-  // @include animation-delay( $moon-orbit-delay );
 }
 

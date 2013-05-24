@@ -1,5 +1,5 @@
 .space {
   @include linear-gradient(top, darken($blackblue, 10) 70%, $blackblue);
   background-attachment: fixed;
-  @include perspective( 600px );
+  @include perspective( 5000px );
 }

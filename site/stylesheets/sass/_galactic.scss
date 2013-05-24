@@ -2,10 +2,16 @@
 // info sourced from nasa http://solarsystem.nasa.gov/planets
 
 
+// convert kms to some usable size. in this case, pixels.
+@function kmtopx($kms) {
+  @return $kms * 0.01px;
+}
+
+
 // earth
 $earth-radius-real: 6371; //km
-$earth-diameter-real: $earth-radius-real*2;
-$earth-size: 30px;
+$earth-diameter-real: $earth-radius-real*2; //km
+$earth-size: kmtopx( $earth-diameter-real ); //px
 
 // Orbit Size Around Sun (semi-major axis) Metric: 149,598,262 km
 // Aphelion (farthest) Metric: 152,098,233 km
@@ -17,21 +23,18 @@ $earth-size: 30px;
 
 
 
-
-
-
 // the moon
+//-------------------------------------------
 $moon-radius-real: 1737.5; //km
-$moon-diameter-real: $moon-radius-real*2;
+$moon-size: kmtopx($moon-radius-real);
+
+
 $moon-orbit-diameter-real: 384400; //km
-
-$moon-size: $earth-size*0.27;
-$moon-bg-color: $offwhite;
-
+$moon-orbit-diameter: kmtopx($moon-orbit-diameter-real); //px
+$moon-orbit-speed: 3680.5; //km per hr
 $moon-orbit-duration: 6s;
-$moon-orbit-diameter: $earth-size*30;
 
-// Orbit Size Around Earth (semi-major axis) Metric: 384400 km. By Comparison: 0.00257 x Earth's Distance from the Sun
+
 // Average Distance from Earth Metric: 384,400 km
 // Perigee (closest) Metric: 363,104 km
 // Apogee (farthest) Metric: 405,696 km
@@ -39,3 +42,5 @@ $moon-orbit-diameter: $earth-size*30;
 // Average Orbit Velocity Metric: 3,680.5 km/h
 // Orbit Inclination 5.16 degrees
 // Equatorial Inclination to Orbit 6.68 degrees
+
+
