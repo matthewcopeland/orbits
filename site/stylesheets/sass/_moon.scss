@@ -1,21 +1,22 @@
-$moon-size: $earth-size*0.27;
 $moon-bg-color: $offwhite;
-
-
-$moon-orbit-duration: 6s;
+$moon-orbit-delay: $rising-earth-duration;
 
 
 @include keyframes(orbit) {
   25% {
     z-index: $moon-z;
-    @include transform( translateX(-$earth-size) );
+    @include transform( translateX(-$moon-orbit-diameter) );
   }
 
   26% { z-index: ($earth-z + 1); }
 
+  50% {
+  }
+
+
   75% {
     z-index: ($earth-z + 1);
-    @include transform( translateX($earth-size) );
+    @include transform( translateX($moon-orbit-diameter) );
   }
 
   76% { z-index: $moon-z; }
@@ -30,5 +31,6 @@ $moon-orbit-duration: 6s;
   @include center($moon-size);
   background: $moon-bg-color;
   @include animation( orbit $moon-orbit-duration infinite linear );
+  // @include animation-delay( $moon-orbit-delay );
 }
 

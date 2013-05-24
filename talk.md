@@ -4,14 +4,12 @@ Talk for Awayday
 Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday.
 
 
-## Demo
-
-### Opening
+## Opening
 * This is the final thing we're going for.
 * Here's our storyboard.
 
 
-### The night sky and the 'darken' function
+## The night sky and the 'darken' function
 The night sky is a linear-gradient that is based on a single color and utilzes sass' darken function.
 
 The darken (or lighten) function allows you to move through the HSL color-space. This can be quite useful when you want to stay consistent within your color-palette and need to create some contrast.  You'll see this become more useful in the Earth.
@@ -21,16 +19,19 @@ The darken (or lighten) function allows you to move through the HSL color-space.
 To creat a ball, we'll need an object that is of equal height and width and has a 50% border-radius.
 
 
-#### Coloring the world
+### Coloring the world
 The Earth is mostly made of water, so we'll use a blue from our color-palette to color the background-color.
 
+***
 
-#### Outter glow and inner-shadow
+### Outter glow and inner-shadow
 Earth's glow is made utilizing the variable from our color-palette that ended our night-sky, we can create a glow around our Earth with a `box-shadow` and sass' `lighten` function.  This maintains consistency with our color-palette while giving the small amount of contrast needed.
 
 For now, we'll use a 2nd css `box-shadow` to create the look of a sphere. Why a shadow instead of a `radial-gradient`? If/when we add some land-masses to the Earth, they'll need to receive a consistent shadow.  This is (for now) the easiest way to accomplish this.
 
-#### Size and position driven via variables
+***
+
+### Size and position driven via variables
 The `$Earth-size` will come in handy when we need to align things with our planet.  We'll use this variable for `height` and `width` and also to calculate a 50% border-radius.
 
 To center the element horizontally, I've made a small utility that accepts a `$size` and then sets the left and margin-left properties.  This is another use of $Earth-size.
@@ -176,7 +177,6 @@ $moon-orbit-duration: 6s;
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-01.jpg)
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-02.jpg)
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-03.jpg)
-![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-04.jpg)
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-05.jpg)
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-06.jpg)
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/moon-animation/moon-animation-07.jpg)
@@ -184,8 +184,31 @@ $moon-orbit-duration: 6s;
 
 ***
 
-### Moon orbit - step it up with real galactic ratios
-The moon's orbit is % of the Earth's mass. So we'll replace the `translateX($earth-size)` with `translateX($moon-orbit-radius)`.
+
+## Step it up to real facts.
+In order to make this into more of a 3D-model and less of more than what [@nanchu](https://github.com/nanchu) calls 'just some spinning-balls', we're going to going to add some facts; from nasa.
+
+For reference: [galactic.md](https://github.com/matthewcopeland/orbits/blob/master/galactic.md) will give the facts you need to understand what we know about the earth and the moon.  We'll implement those facts in [_galactic.scss](https://github.com/matthewcopeland/orbits/blob/master/site/stylesheets/sass/_galactic.scss) and do some calculations to drive our little model.
+
+
+
+### Refactor the appropriate variables into `_galactic.scss`.
+In order to organize our stylesheets a bit better, we'll need to refactor some of the variables form `_earth.scss` and `_moon.scss`. Some general guidelines for which variables to refactor into `_galactic.scss`:
+
+* Is it a graphic-style? Leave it. *(for now)* e.g. `$moon-bg-color`
+* Is it positional? Refactor it. e.g. `$moon-size`
+
+Example: The moon's orbit is 30x the size of Earth. So we'll replace the `translateX($earth-size)` with `translateX($moon-orbit-diameter)`.  We should pull the `$moon-orbit-diameter` into the galactic file.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,6 +217,7 @@ The moon's orbit is % of the Earth's mass. So we'll replace the `translateX($ear
 ### CSS stuff
 * Paul Irish on the benefits of animating with translate. http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft
 * Lea Verou's animation's with one keyframe. http://lea.verou.me/2012/12/animations-with-one-keyframe
+* David DeSandro on 3D transforms http://24ways.org/2010/intro-to-css-3d-transforms
 * Paul Hayes' 3D css sphere http://www.paulrhayes.com/2011-02/creating-a-sphere-with-3d-css
 
 

@@ -1,9 +1,4 @@
-$earth-size: 600px;
-
 $earth-glow-color: rgba(lighten($blackblue, 20), 0.4);
-
-// shadows
-// $earth-outter-glow-rise: 0 (-$earth-size/6) $earth-size/2 0 $earth-glow-color;
 $earth-outter-glow: 0 (-$earth-size/10) $earth-size/4 0 $earth-glow-color;
 
 
