@@ -1,0 +1,12 @@
+// the sun
+$sun-to-earth: kmtopx( 149597900 );
+$sun-radius:  kmtopx( 695508 );
+$sun-size: $sun-radius*2;
+
+
+#sun {
+  position: fixed;
+  @include sphere($sun-size);
+  background: $lightorange;
+  @include center($sun-size);
+}

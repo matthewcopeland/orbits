@@ -185,28 +185,7 @@ $moon-orbit-duration: 6s;
 ***
 
 
-## Step it up to real facts.
-In order to make this into more of a 3D-model and less of more than what [@nanchu](https://github.com/nanchu) calls 'just some spinning-balls', we're going to going to add some facts; from nasa.
-
-For reference: [galactic.md](https://github.com/matthewcopeland/orbits/blob/master/galactic.md) will give the facts you need to understand what we know about the earth and the moon.  We'll implement those facts in [_galactic.scss](https://github.com/matthewcopeland/orbits/blob/master/site/stylesheets/sass/_galactic.scss) and do some calculations to drive our little model.
-
-
-
-### Refactor the appropriate variables into `_galactic.scss`.
-In order to organize our stylesheets a bit better, we'll need to refactor some of the variables form `_earth.scss` and `_moon.scss`. Some general guidelines for which variables to refactor into `_galactic.scss`:
-
-* Is it a graphic-style? Leave it. *(for now)* e.g. `$moon-bg-color`
-* Is it positional? Refactor it. e.g. `$moon-size`
-
-Example: The moon's orbit is 30x the size of Earth. So we'll replace the `translateX($earth-size)` with `translateX($moon-orbit-diameter)`.  We should pull the `$moon-orbit-diameter` into the galactic file.
-
-
-
-
-
-
-
-
+## The sun. It's big.
 
 
 

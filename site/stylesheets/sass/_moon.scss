@@ -1,4 +1,10 @@
+// the moon
+//-------------------------------------------
+$moon-size: $earth-size*0.27;
+$moon-orbit-diameter: $earth-size*0.3;
+$moon-orbit-duration: 6s;
 $moon-bg-color: $offwhite;
+
 
 
 @include keyframes(orbit) {
@@ -21,12 +27,13 @@ $moon-bg-color: $offwhite;
 
 
 
+
 #moon {
   position: fixed;
   @include sphere($moon-size);
   @include center($moon-size);
   background: $moon-bg-color;
   z-index: $moon-z;
-  @include animation( orbit $moon-orbit-duration infinite linear );
+  // @include animation( orbit $moon-orbit-duration infinite linear );
 }
 

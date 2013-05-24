@@ -1,3 +1,7 @@
+// earth
+$earth-radius-real: 6371; //km
+$earth-diameter-real: $earth-radius-real*2; //km
+$earth-size: kmtopx( $earth-diameter-real ); //px
 $earth-glow-color: rgba(lighten($blackblue, 20), 0.4);
 $earth-outter-glow: 0 (-$earth-size/10) $earth-size/4 0 $earth-glow-color;
 
