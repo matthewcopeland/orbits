@@ -6,7 +6,12 @@
     %link{rel: 'icon', href:'/images/favicon.png', type: 'image/png'}
     %link{rel:'stylesheet', type:'text/css', href:'/stylesheets/css/screen.css'}
 
-  %body.space
-    #sun
-    / #earth
-    / #moon
+  %body
+    .space
+      / - 7.times do
+      /   .star-cluster
+      /     - 23.times do
+      /       .star
+      #sun
+      / #earth
+      / #moon

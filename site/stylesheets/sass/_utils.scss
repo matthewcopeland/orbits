@@ -15,8 +15,8 @@
 }
 
 
-@mixin fill($position:absolute) {
-  position: absolute;
+@mixin fill {
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;

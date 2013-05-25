@@ -30,6 +30,7 @@ $moon-bg-color: $offwhite;
 
 #moon {
   position: fixed;
+  display: block;
   @include sphere($moon-size);
   @include center($moon-size);
   background: $moon-bg-color;

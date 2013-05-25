@@ -8,12 +8,13 @@ $earth-outter-glow: 0 (-$earth-size/10) $earth-size/4 0 $earth-glow-color;
 
 #earth {
   position: fixed;
+  display: block;
   z-index: $earth-z;
   @include circle($earth-size);
   @include center($earth-size);
   background-color: $darkblue;
   box-shadow: $earth-outter-glow, sphere-inset-shadow($earth-size);
-  @include transform( translate3d(0,0,0) );
+  @include transform( translate3d(0,0,0px) );
 }
 
 

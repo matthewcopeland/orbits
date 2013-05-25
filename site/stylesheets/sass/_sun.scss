@@ -1,12 +1,15 @@
-// the sun
-$sun-to-earth: kmtopx( 149597900 );
-$sun-radius:  kmtopx( 695508 );
-$sun-size: $sun-radius*2;
-
+@include glow-keyframes(sunglow, $sun-size, $sun-color);
 
 #sun {
   position: fixed;
-  @include sphere($sun-size);
-  background: $lightorange;
+  display: block;
+  @include circle($sun-size);
   @include center($sun-size);
+  @include transform( rotateY(180deg) translate3d(0,0,$sun-depth) );
+  background: $lightorange;
+  @include animation-name( sunglow, zoomin );
+  @include animation-duration( 2s, 8s );
+  @include animation-timing-function( linear );
+  @include animation-direction( alternate, normal );
+  @include animation-iteration-count( infinite, 1 );
 }

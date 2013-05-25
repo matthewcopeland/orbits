@@ -1,5 +1,14 @@
-.space {
+// spacey stuff
+
+
+body {
+  @include perspective( 500px );
   @include linear-gradient(top, darken($blackblue, 10) 70%, $blackblue);
   background-attachment: fixed;
-  @include perspective( 5000px );
+}
+
+
+.space {
+  @include fill;
+  @include transform-style( preserve-3d );
 }

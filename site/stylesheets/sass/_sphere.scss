@@ -2,17 +2,17 @@
 
 
 @mixin circle($size) {
-  display: block;
   height: $size;
   width: $size;
   @include border-radius($size/2);
 }
 
 
-// shadows
+
 @function sphere-inset-shadow($size) {
   @return inset (-$size/20) (-$size/20) $size/10 0 rgba(0,0,0, 0.6);
 }
+
 
 
 @mixin sphere($size) {

@@ -1,0 +1,30 @@
+// stars
+// $star-size: $sun-size/100;
+// $star-color: white;
+
+
+// .star-cluster {
+//   position: relative;
+//   display: inline-block;
+//   z-index: -1;
+// }
+
+
+// @function star-size($i) {
+//   @return $sun-size/(30*$i);
+// }
+
+
+// .star {
+//   background: $star-color;
+//   margin: 40px;
+
+
+//   $star-count: 30; // $star-count should be >= the number of .stars in a .star-cluster
+
+//   @for $i from 1 through $star-count {
+//     &:nth-of-type( #{$i} ) { @include circle( star-size($i) ); }
+//   }
+
+// }
+
