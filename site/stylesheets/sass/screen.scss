@@ -2,12 +2,10 @@
 @import "bourbon/bourbon";
 
 // variables
+@import "_utils.scss";
 @import "_color_palette.scss";
 @import "_zed_index.scss";
 @import "_variables.scss";
-
-// functions
-@import "_utils.scss";
 @import "_sphere.scss";
 @import "_orbit_keyframes.scss";
 
