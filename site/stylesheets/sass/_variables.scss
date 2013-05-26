@@ -1,7 +1,20 @@
 // sun
-$sun-to-earth: kmtopx( 149597900 );
-$sun-radius:  kmtopx( 695508 );
+$sun-radius: kmtopx( 695508 );
 $sun-size: $sun-radius*2;
-$sun-depth: $sun-size;
-$sun-vanishing-point: $sun-size*500;
 $sun-color: $lightorange;
+
+
+$earth-size: kmtopx( 6371*40 ); //px
+
+
+
+// space viewport
+$vanishing-point: $sun-size*500;
+$viewport-depth: $sun-size*2;
+
+
+
+// animation variables
+$sun-glow-animation-duration: 1.8s;
+$orbit-animation-duration: 4s;
+$orbit-animation-delay: 0;

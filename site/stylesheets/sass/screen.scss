@@ -7,12 +7,11 @@
 
 
 @import "_variables.scss";
-@import "_animations.scss";
+@import "_orbit_keyframes.scss";
 
 
 //-------------------
 @import "_space.scss";
-@import "_stars.scss";
+// @import "_stars.scss";
 @import "_sun.scss";
-@import "_earth.scss";
-@import "_moon.scss";
+@import "_planet.scss";

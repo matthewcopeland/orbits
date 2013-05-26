@@ -10,6 +10,7 @@
 // example use to define a glow-keyframes.
 // @include glow-keyframes(starglow, $star-size, $star-color);
 
+
 @mixin glow-keyframes($name, $size, $color) {
   @include keyframes($name) {
     from { box-shadow: 0 0 $size $size/3 $color; }
@@ -24,7 +25,17 @@
 // zoomim keyframe animation
 //-------------------------------
 @include keyframes(zoomin) {
-  0%  { @include transform( rotateY(180deg) translate3d(0,0,$sun-vanishing-point) ); }
-  70% { @include transform( rotateY(180deg) translate3d(0,0,$sun-size/2) ); }
+  0%  { @include transform( rotateY(180deg) translate3d(0,0,$vanishing-point) ); }
+  70% { @include transform( rotateY(180deg) translate3d(0,0,$viewport-depth) ); }
 }
+
+
+
+@include keyframes(orbit){
+  @for $i from 1 through 4 {
+    #{$i*25%} { @include transform( rotate3d(0,0,1, #{$i*90}deg) ); }
+  }
+}
+
+
 

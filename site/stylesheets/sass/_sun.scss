@@ -5,11 +5,7 @@
   display: block;
   @include circle($sun-size);
   @include center($sun-size);
-  @include transform( rotateY(180deg) translate3d(0,0,$sun-depth) );
-  background: $lightorange;
-  @include animation-name( sunglow, zoomin );
-  @include animation-duration( 2s, 8s );
-  @include animation-timing-function( linear );
-  @include animation-direction( alternate, normal );
-  @include animation-iteration-count( infinite, 1 );
+  background: $sun-color;
+  box-shadow: 0 0 $sun-size*2 $sun-size/4 $sun-color;
+  // @include animation(sunglow $sun-glow-animation-duration alternate infinite );
 }
