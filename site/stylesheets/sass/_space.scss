@@ -1,19 +1,6 @@
 // spacey stuff
 
-
-body {
-  @include perspective( 500px );
+#milkyway {
+  @include fill;
   background: darken($blackblue, 10);
-}
-
-
-.space {
-  @include fill;
-}
-
-
-#milky-way {
-  @include fill;
-  @include transform( rotate3d(0,1,0,180deg) translate3d(0,0, $viewport-depth) );
-  @include animation( zoomin $zoomin-animation-duration $zoomin-animation-delay ease-out );
 }

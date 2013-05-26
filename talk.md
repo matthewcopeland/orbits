@@ -21,8 +21,8 @@ To creat a ball, we'll need an object that is of equal height and width and has 
 
 
 ### Size and position driven via variables
-The `$Earth-size` will come in handy when we need to align things with our planet.  We'll use this variable for `height` and `width` and also to calculate a 50% border-radius.
-To center the element horizontally, I've made a small utility that accepts a `$size` and then sets the left and margin-left properties.  This is another use of $Earth-size. Now it's nice and easy to change the size of the planet.
+The `$planet-size` will come in handy when we need to align things with our planet.  We'll use this variable for `height` and `width` and also to calculate a 50% border-radius.
+To center the element horizontally, I've made a small utility that accepts a `$size` and then sets the left and margin-left properties.  This is another use of $planet-size. Now it's nice and easy to change the size of the planet.
 
 
 ### Make a utility for a Cicle
@@ -39,14 +39,6 @@ In this utility, we'll need to include a few things: `height`, `width` and `bord
   width: $size;
   @include border-radius($size/2);
 }
-
-
-## Animating
-Too many planet-animations will overlaod the cpu/gpu.
-Can only show a few gradients/mods etc per shot.
-So we need to keep only a few items on the screen at a time.
-We'll pull this off.
-
 
 
 

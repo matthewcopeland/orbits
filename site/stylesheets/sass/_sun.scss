@@ -1,11 +1,21 @@
-@include glow-keyframes(sunglow, $sun-size, $sun-color);
+// the sun
+$sun-color: $lightorange;
+
 
 #sun {
   position: fixed;
   display: block;
   @include circle($sun-size);
   @include center($sun-size);
-  background: $sun-color;
-  box-shadow: 0 0 $sun-size*2 $sun-size/4 $sun-color;
-  @include animation(sunglow $sunglow-animation-duration $sunglow-animation-delay alternate $sunglow-animation-iteration-count );
+
+  @include radial-gradient(50% 50%, circle closest-side, $sun-color, rgba($sun-color, 0.0) );
+
+  @include transform( scale(1) );
+  @include animation-name(zoomin, pulse);
+  @include animation-duration($zoomin-animation-duration, $sunglow-animation-duration );
+  @include animation-delay( $zoomin-animation-delay, $sunglow-animation-delay );
+  @include animation-iteration-count( $zoomin-animation-iteration-count, infinite );
+  @include animation-direction( alternate );
+  @include animation-timing-function( linear );
 }
+

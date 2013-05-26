@@ -1,28 +1,20 @@
 // sun
-$sun-radius: kmtopx( 695508 );
-$sun-size: $sun-radius*2;
-$sun-color: $lightorange;
-
-
-$earth-size: kmtopx( 6371*40 ); //px
+$sun-size: 300px;
 
 
 
-// space viewport
-$vanishing-point: $sun-size*500;
-$viewport-depth: $sun-size*2;
-
+$planet-size: 30px;
 
 
 // animation variables
 $zoomin-animation-delay: 0;
 $zoomin-animation-duration: 5s;
-
+$zoomin-animation-iteration-count: 1;
+$zoomin-animation-direction: forward;
 
 $sunglow-animation-delay: $zoomin-animation-duration;
 $sunglow-animation-duration: 1.8s;
-$sunglow-animation-iteration-count: 3;
-$sunglow-total-duration: $sunglow-animation-duration * $sunglow-animation-iteration-count;
+$sunglow-total-duration: $sunglow-animation-duration*3;
 
 
 $orbit-animation-delay: $zoomin-animation-duration + $sunglow-total-duration;
@@ -40,7 +32,7 @@ $total-animation-time:
   + $sunglow-total-duration
   + $orbit-animation-duration;
 
-// .space:before {
+// #milkyway:before {
 //   content: "#{$total-animation-time}";
 //   position: absolute;
 //   top: 0;

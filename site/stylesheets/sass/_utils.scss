@@ -24,6 +24,9 @@
 }
 
 
-@function kmtopx($kms) {
-  @return $kms * 0.0005px;
+@function kmtopx($km) {
+  @return $km * 0.0005px;
 }
+
+
+
