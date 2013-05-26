@@ -1,17 +1,22 @@
+// vender
 @import "bourbon/bourbon";
-@import "_utils.scss";
-@import "_sphere.scss";
+
+// variables
 @import "_color_palette.scss";
 @import "_zed_index.scss";
-@import "_reset.scss";
-
-
 @import "_variables.scss";
+
+// functions
+@import "_utils.scss";
+@import "_sphere.scss";
 @import "_orbit_keyframes.scss";
 
 
-//-------------------
+//-------------------------
+// above doesn't print css
+//-------------------------
+
+@import "_reset.scss";
 @import "_space.scss";
-// @import "_stars.scss";
 @import "_sun.scss";
 @import "_planet.scss";

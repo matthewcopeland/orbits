@@ -1,316 +1,58 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-weight: normal; }
+/*
+Syntax error: Undefined operation: "kmtopx(695508) times 2".
+        on line 3 of site/stylesheets/sass/_variables.scss
+        from line 7 of site/stylesheets/sass/screen.scss
 
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden; }
+1: // vender
+2: @import "bourbon/bourbon";
+3: 
+4: // variables
+5: @import "_color_palette.scss";
+6: @import "_zed_index.scss";
+7: @import "_variables.scss";
+8: 
 
-@-webkit-keyframes zoomin {
-  from {
-    -webkit-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 347754px); } }
-
-@-moz-keyframes zoomin {
-  from {
-    -moz-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 347754px); } }
-
-@-o-keyframes zoomin {
-  from {
-    -o-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 347754px); } }
-
-@keyframes zoomin {
-  from {
-    transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 347754px); } }
-
-@-webkit-keyframes orbit {
-  50% {
-    opacity: .8; }
-
-  25% {
-    -webkit-transform: rotate3d(0, 0, 1, 90deg); }
-
-  50% {
-    opacity: .8; }
-
-  50% {
-    -webkit-transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
-
-  75% {
-    -webkit-transform: rotate3d(0, 0, 1, 270deg); }
-
-  50% {
-    opacity: .8; }
-
-  100% {
-    -webkit-transform: rotate3d(0, 0, 1, 360deg); } }
-
-@-moz-keyframes orbit {
-  50% {
-    opacity: .8; }
-
-  25% {
-    -moz-transform: rotate3d(0, 0, 1, 90deg); }
-
-  50% {
-    opacity: .8; }
-
-  50% {
-    -moz-transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
-
-  75% {
-    -moz-transform: rotate3d(0, 0, 1, 270deg); }
-
-  50% {
-    opacity: .8; }
-
-  100% {
-    -moz-transform: rotate3d(0, 0, 1, 360deg); } }
-
-@-o-keyframes orbit {
-  50% {
-    opacity: .8; }
-
-  25% {
-    -o-transform: rotate3d(0, 0, 1, 90deg); }
-
-  50% {
-    opacity: .8; }
-
-  50% {
-    -o-transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
-
-  75% {
-    -o-transform: rotate3d(0, 0, 1, 270deg); }
-
-  50% {
-    opacity: .8; }
-
-  100% {
-    -o-transform: rotate3d(0, 0, 1, 360deg); } }
-
-@keyframes orbit {
-  50% {
-    opacity: .8; }
-
-  25% {
-    transform: rotate3d(0, 0, 1, 90deg); }
-
-  50% {
-    opacity: .8; }
-
-  50% {
-    transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
-
-  75% {
-    transform: rotate3d(0, 0, 1, 270deg); }
-
-  50% {
-    opacity: .8; }
-
-  100% {
-    transform: rotate3d(0, 0, 1, 360deg); } }
-
-body {
-  -webkit-perspective: 500px;
-  -moz-perspective: 500px;
-  perspective: 500px;
-  background: #070d10; }
-
-.space {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-#milky-way {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1391.016px);
-  -moz-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1391.016px);
-  -ms-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1391.016px);
-  -o-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1391.016px);
-  transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1391.016px);
-  -webkit-animation: zoomin 5s 0 ease-out;
-  -moz-animation: zoomin 5s 0 ease-out;
-  animation: zoomin 5s 0 ease-out; }
-
-@-webkit-keyframes sunglow {
-  from {
-    box-shadow: 0 0 695.508px 231.836px #f59f1a; }
-
-  to {
-    box-shadow: 0 0 1391.016px 173.877px #f59f1a; } }
-
-@-moz-keyframes sunglow {
-  from {
-    box-shadow: 0 0 695.508px 231.836px #f59f1a; }
-
-  to {
-    box-shadow: 0 0 1391.016px 173.877px #f59f1a; } }
-
-@-o-keyframes sunglow {
-  from {
-    box-shadow: 0 0 695.508px 231.836px #f59f1a; }
-
-  to {
-    box-shadow: 0 0 1391.016px 173.877px #f59f1a; } }
-
-@keyframes sunglow {
-  from {
-    box-shadow: 0 0 695.508px 231.836px #f59f1a; }
-
-  to {
-    box-shadow: 0 0 1391.016px 173.877px #f59f1a; } }
-
-#sun {
-  position: fixed;
-  display: block;
-  height: 695.508px;
-  width: 695.508px;
-  border-radius: 347.754px;
-  border-radius: 347.754px;
-  left: 50%;
-  margin-left: -347.754px;
-  top: 50%;
-  margin-top: -347.754px;
-  background: #f59f1a;
-  box-shadow: 0 0 1391.016px 173.877px #f59f1a;
-  -webkit-animation: sunglow 1.8s 5s alternate 3;
-  -moz-animation: sunglow 1.8s 5s alternate 3;
-  animation: sunglow 1.8s 5s alternate 3; }
-
-.orbit {
-  display: block;
-  position: fixed;
-  opacity: 0;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  -webkit-transform: rotate3d(0, 0, 0, 0deg);
-  -moz-transform: rotate3d(0, 0, 0, 0deg);
-  -ms-transform: rotate3d(0, 0, 0, 0deg);
-  -o-transform: rotate3d(0, 0, 0, 0deg);
-  transform: rotate3d(0, 0, 0, 0deg);
-  -webkit-animation-name: orbit;
-  -moz-animation-name: orbit;
-  animation-name: orbit;
-  -webkit-animation-delay: 10.4s;
-  -moz-animation-delay: 10.4s;
-  animation-delay: 10.4s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  animation-timing-function: linear; }
-  .orbit:nth-of-type(1) {
-    height: 1669.2192px;
-    width: 1669.2192px;
-    border-radius: 834.6096px;
-    border-radius: 834.6096px;
-    left: 50%;
-    margin-left: -834.6096px;
-    top: 50%;
-    margin-top: -834.6096px;
-    -webkit-animation-duration: 3.6s;
-    -moz-animation-duration: 3.6s;
-    animation-duration: 3.6s;
-    -webkit-animation-delay: 12.48s;
-    -moz-animation-delay: 12.48s;
-    animation-delay: 12.48s; }
-  .orbit:nth-of-type(2) {
-    height: 1947.4224px;
-    width: 1947.4224px;
-    border-radius: 973.7112px;
-    border-radius: 973.7112px;
-    left: 50%;
-    margin-left: -973.7112px;
-    top: 50%;
-    margin-top: -973.7112px;
-    -webkit-animation-duration: 4.2s;
-    -moz-animation-duration: 4.2s;
-    animation-duration: 4.2s;
-    -webkit-animation-delay: 14.56s;
-    -moz-animation-delay: 14.56s;
-    animation-delay: 14.56s; }
-  .orbit:nth-of-type(3) {
-    height: 2225.6256px;
-    width: 2225.6256px;
-    border-radius: 1112.8128px;
-    border-radius: 1112.8128px;
-    left: 50%;
-    margin-left: -1112.8128px;
-    top: 50%;
-    margin-top: -1112.8128px;
-    -webkit-animation-duration: 4.8s;
-    -moz-animation-duration: 4.8s;
-    animation-duration: 4.8s;
-    -webkit-animation-delay: 16.64s;
-    -moz-animation-delay: 16.64s;
-    animation-delay: 16.64s; }
-  .orbit:nth-of-type(4) {
-    height: 2503.8288px;
-    width: 2503.8288px;
-    border-radius: 1251.9144px;
-    border-radius: 1251.9144px;
-    left: 50%;
-    margin-left: -1251.9144px;
-    top: 50%;
-    margin-top: -1251.9144px;
-    -webkit-animation-duration: 5.4s;
-    -moz-animation-duration: 5.4s;
-    animation-duration: 5.4s;
-    -webkit-animation-delay: 18.72s;
-    -moz-animation-delay: 18.72s;
-    animation-delay: 18.72s; }
-  .orbit:nth-of-type(5) {
-    height: 2782.032px;
-    width: 2782.032px;
-    border-radius: 1391.016px;
-    border-radius: 1391.016px;
-    left: 50%;
-    margin-left: -1391.016px;
-    top: 50%;
-    margin-top: -1391.016px;
-    -webkit-animation-duration: 6s;
-    -moz-animation-duration: 6s;
-    animation-duration: 6s;
-    -webkit-animation-delay: 20.8s;
-    -moz-animation-delay: 20.8s;
-    animation-delay: 20.8s; }
-
-.planet {
-  display: block;
-  position: absolute;
-  right: -63.71px;
-  top: 50%;
-  margin-top: -63.71px;
-  height: 127.42px;
-  width: 127.42px;
-  border-radius: 63.71px;
-  border-radius: 63.71px;
-  background: #006fab; }
+Backtrace:
+site/stylesheets/sass/_variables.scss:3
+site/stylesheets/sass/screen.scss:7
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/script/operation.rb:93:in `rescue in _perform'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/script/operation.rb:89:in `_perform'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/script/node.rb:40:in `perform'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:325:in `visit_variable'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `block in visit_import'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `map'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/tree/root_node.rb:20:in `render'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:299:in `block in watch'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
+/Users/Thoughtworks/.rvm/gems/ruby-1.9.3-p392@hamlserver/gems/sass-3.2.5/vendor/listen/lib/listen/adapters/polling.rb:31:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined operation: \"kmtopx(695508) times 2\".\A         on line 3 of site/stylesheets/sass/_variables.scss\A         from line 7 of site/stylesheets/sass/screen.scss\A \A 1: // vender\A 2: @import \"bourbon/bourbon\";\A 3: \A 4: // variables\A 5: @import \"_color_palette.scss\";\A 6: @import \"_zed_index.scss\";\A 7: @import \"_variables.scss\";\A 8: "; }

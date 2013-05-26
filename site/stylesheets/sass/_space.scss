@@ -9,7 +9,6 @@ body {
 
 .space {
   @include fill;
-  @include transform-style( preserve-3d );
 }
 
 
