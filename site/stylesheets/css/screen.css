@@ -16,18 +16,58 @@
 
 @-webkit-keyframes zoomin {
   from {
-    -webkit-transform: scale(0); } }
+    -webkit-transform: scale(0); }
+
+  to {
+    -webkit-transform: scale(1); } }
 
 @-moz-keyframes zoomin {
   from {
-    -moz-transform: scale(0); } }
+    -moz-transform: scale(0); }
+
+  to {
+    -moz-transform: scale(1); } }
 
 @-o-keyframes zoomin {
   from {
-    -o-transform: scale(0); } }
+    -o-transform: scale(0); }
+
+  to {
+    -o-transform: scale(1); } }
 
 @keyframes zoomin {
   from {
+    transform: scale(0); }
+
+  to {
+    transform: scale(1); } }
+
+@-webkit-keyframes zoomout {
+  from {
+    -webkit-transform: scale(1); }
+
+  to {
+    -webkit-transform: scale(0); } }
+
+@-moz-keyframes zoomout {
+  from {
+    -moz-transform: scale(1); }
+
+  to {
+    -moz-transform: scale(0); } }
+
+@-o-keyframes zoomout {
+  from {
+    -o-transform: scale(1); }
+
+  to {
+    -o-transform: scale(0); } }
+
+@keyframes zoomout {
+  from {
+    transform: scale(1); }
+
+  to {
     transform: scale(0); } }
 
 @-webkit-keyframes orbit {
@@ -143,13 +183,23 @@ html, body {
   width: 100%;
   overflow: hidden; }
 
+body {
+  background: #070d10; }
+
 #milkyway {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: #070d10; }
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-animation: zoomin 8s 0 linear, zoomout 10s 20.6s linear;
+  -moz-animation: zoomin 8s 0 linear, zoomout 10s 20.6s linear;
+  animation: zoomin 8s 0 linear, zoomout 10s 20.6s linear; }
 
 #sun {
   position: fixed;
@@ -165,46 +215,26 @@ html, body {
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #f59f1a), color-stop(100%, rgba(245, 159, 26, 0)));
   background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #f59f1a, rgba(245, 159, 26, 0));
   background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0));
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-animation-name: zoomin, pulse;
-  -moz-animation-name: zoomin, pulse;
-  animation-name: zoomin, pulse;
-  -webkit-animation-duration: 5s, 1.8s;
-  -moz-animation-duration: 5s, 1.8s;
-  animation-duration: 5s, 1.8s;
-  -webkit-animation-delay: 0, 5s;
-  -moz-animation-delay: 0, 5s;
-  animation-delay: 0, 5s;
-  -webkit-animation-iteration-count: 1, infinite;
-  -moz-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  animation-timing-function: linear; }
+  -webkit-animation: pulse 1.8s 8s alternate infinite linear;
+  -moz-animation: pulse 1.8s 8s alternate infinite linear;
+  animation: pulse 1.8s 8s alternate infinite linear; }
 
 .orbit {
   display: block;
   position: fixed;
   opacity: 0;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  -webkit-transform: rotate3d(0, 0, 0, 0deg);
-  -moz-transform: rotate3d(0, 0, 0, 0deg);
-  -ms-transform: rotate3d(0, 0, 0, 0deg);
-  -o-transform: rotate3d(0, 0, 0, 0deg);
-  transform: rotate3d(0, 0, 0, 0deg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-transform: rotate3d(0.5, 0, 0, 90deg);
+  -moz-transform: rotate3d(0.5, 0, 0, 90deg);
+  -ms-transform: rotate3d(0.5, 0, 0, 90deg);
+  -o-transform: rotate3d(0.5, 0, 0, 90deg);
+  transform: rotate3d(0.5, 0, 0, 90deg);
   -webkit-animation-name: orbit;
   -moz-animation-name: orbit;
   animation-name: orbit;
-  -webkit-animation-delay: 10.4s;
-  -moz-animation-delay: 10.4s;
-  animation-delay: 10.4s;
+  -webkit-animation-delay: 11.6s;
+  -moz-animation-delay: 11.6s;
+  animation-delay: 11.6s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -222,10 +252,7 @@ html, body {
     margin-top: -216px;
     -webkit-animation-duration: 3.6s;
     -moz-animation-duration: 3.6s;
-    animation-duration: 3.6s;
-    -webkit-animation-delay: 12.48s;
-    -moz-animation-delay: 12.48s;
-    animation-delay: 12.48s; }
+    animation-duration: 3.6s; }
   .orbit:nth-of-type(2) {
     height: 504.0px;
     width: 504.0px;
@@ -237,10 +264,7 @@ html, body {
     margin-top: -252.0px;
     -webkit-animation-duration: 4.2s;
     -moz-animation-duration: 4.2s;
-    animation-duration: 4.2s;
-    -webkit-animation-delay: 14.56s;
-    -moz-animation-delay: 14.56s;
-    animation-delay: 14.56s; }
+    animation-duration: 4.2s; }
   .orbit:nth-of-type(3) {
     height: 576px;
     width: 576px;
@@ -252,10 +276,7 @@ html, body {
     margin-top: -288px;
     -webkit-animation-duration: 4.8s;
     -moz-animation-duration: 4.8s;
-    animation-duration: 4.8s;
-    -webkit-animation-delay: 16.64s;
-    -moz-animation-delay: 16.64s;
-    animation-delay: 16.64s; }
+    animation-duration: 4.8s; }
   .orbit:nth-of-type(4) {
     height: 648px;
     width: 648px;
@@ -267,10 +288,7 @@ html, body {
     margin-top: -324px;
     -webkit-animation-duration: 5.4s;
     -moz-animation-duration: 5.4s;
-    animation-duration: 5.4s;
-    -webkit-animation-delay: 18.72s;
-    -moz-animation-delay: 18.72s;
-    animation-delay: 18.72s; }
+    animation-duration: 5.4s; }
   .orbit:nth-of-type(5) {
     height: 720px;
     width: 720px;
@@ -282,10 +300,7 @@ html, body {
     margin-top: -360px;
     -webkit-animation-duration: 6s;
     -moz-animation-duration: 6s;
-    animation-duration: 6s;
-    -webkit-animation-delay: 20.8s;
-    -moz-animation-delay: 20.8s;
-    animation-delay: 20.8s; }
+    animation-duration: 6s; }
   .orbit:nth-of-type(6) {
     height: 792.0px;
     width: 792.0px;
@@ -297,10 +312,7 @@ html, body {
     margin-top: -396.0px;
     -webkit-animation-duration: 6.6s;
     -moz-animation-duration: 6.6s;
-    animation-duration: 6.6s;
-    -webkit-animation-delay: 22.88s;
-    -moz-animation-delay: 22.88s;
-    animation-delay: 22.88s; }
+    animation-duration: 6.6s; }
   .orbit:nth-of-type(7) {
     height: 864.0px;
     width: 864.0px;
@@ -312,10 +324,7 @@ html, body {
     margin-top: -432.0px;
     -webkit-animation-duration: 7.2s;
     -moz-animation-duration: 7.2s;
-    animation-duration: 7.2s;
-    -webkit-animation-delay: 24.96s;
-    -moz-animation-delay: 24.96s;
-    animation-delay: 24.96s; }
+    animation-duration: 7.2s; }
   .orbit:nth-of-type(8) {
     height: 936px;
     width: 936px;
@@ -327,10 +336,7 @@ html, body {
     margin-top: -468px;
     -webkit-animation-duration: 7.8s;
     -moz-animation-duration: 7.8s;
-    animation-duration: 7.8s;
-    -webkit-animation-delay: 27.04s;
-    -moz-animation-delay: 27.04s;
-    animation-delay: 27.04s; }
+    animation-duration: 7.8s; }
   .orbit:nth-of-type(9) {
     height: 1008.0px;
     width: 1008.0px;
@@ -342,10 +348,7 @@ html, body {
     margin-top: -504.0px;
     -webkit-animation-duration: 8.4s;
     -moz-animation-duration: 8.4s;
-    animation-duration: 8.4s;
-    -webkit-animation-delay: 29.12s;
-    -moz-animation-delay: 29.12s;
-    animation-delay: 29.12s; }
+    animation-duration: 8.4s; }
   .orbit:nth-of-type(10) {
     height: 1080px;
     width: 1080px;
@@ -357,10 +360,7 @@ html, body {
     margin-top: -540px;
     -webkit-animation-duration: 9s;
     -moz-animation-duration: 9s;
-    animation-duration: 9s;
-    -webkit-animation-delay: 31.2s;
-    -moz-animation-delay: 31.2s;
-    animation-delay: 31.2s; }
+    animation-duration: 9s; }
 
 .planet {
   display: block;
@@ -372,5 +372,5 @@ html, body {
   width: 30px;
   border-radius: 15px;
   border-radius: 15px;
-  box-shadow: inset -1.5px -1.5px 3px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: inset -3px -3px 3px 0 rgba(0, 0, 0, 0.6);
   background: #006fab; }

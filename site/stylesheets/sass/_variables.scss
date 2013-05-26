@@ -8,29 +8,27 @@ $planet-size: 30px;
 
 // animation variables
 $zoomin-animation-delay: 0;
-$zoomin-animation-duration: 5s;
-$zoomin-animation-iteration-count: 1;
-$zoomin-animation-direction: forward;
+$zoomin-animation-duration: 8s;
+
 
 $sunglow-animation-delay: $zoomin-animation-duration;
 $sunglow-animation-duration: 1.8s;
-$sunglow-total-duration: $sunglow-animation-duration*3;
 
 
-$orbit-animation-delay: $zoomin-animation-duration + $sunglow-total-duration;
+$orbit-animation-delay: $sunglow-animation-delay + $sunglow-animation-duration*2;
 $orbit-animation-duration: 3s;
 
 
-
+$zoomout-animation-delay: $orbit-animation-delay + $orbit-animation-duration*3;
+$zoomout-animation-duration: 10s;
 
 
 
 // A little cheat to know the total animation time.
 
 $total-animation-time:
-    $zoomin-animation-duration
-  + $sunglow-total-duration
-  + $orbit-animation-duration;
+    $zoomout-animation-delay
+  + $zoomout-animation-duration;
 
 // #milkyway:before {
 //   content: "#{$total-animation-time}";

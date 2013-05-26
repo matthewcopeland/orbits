@@ -4,8 +4,8 @@ $orbit-size: $sun-size*1.2;
   display: block;
   position: fixed;
   opacity: 0;
-  border: 2px solid rgba(255,255,255, .2);
-  @include transform( rotate3d(0,0,0,0deg) );
+  border: 1px solid rgba(255,255,255, .2);
+  @include transform( rotate3d(0.5,0,0, 90deg) );
   @include animation-name(orbit);
   @include animation-delay( $orbit-animation-delay );
   @include animation-iteration-count( infinite );
@@ -21,7 +21,6 @@ $orbit-size: $sun-size*1.2;
       @include circle( nth-orbit($orbit-size, $i) );
       @include center( nth-orbit($orbit-size, $i) );
       @include animation-duration( nth-orbit($orbit-animation-duration, $i) );
-      @include animation-delay( nth-orbit($orbit-animation-delay, $i) );
     }
   }
 }

@@ -6,12 +6,18 @@
 
 
 
-// zoomim keyframe animation
+// zoominim keyframe animation
 //-------------------------------
 @include keyframes(zoomin) {
   from { @include transform( scale(0) ); }
+  to { @include transform( scale(1) ); }
 }
 
+
+@include keyframes(zoomout) {
+  from { @include transform( scale(1) ); }
+  to { @include transform( scale(0) ); }
+}
 
 
 @include keyframes(orbit) {
@@ -20,5 +26,3 @@
     #{$i*25%} { @include transform( rotate3d(0,0,1, #{$i*90}deg) ); }
   }
 }
-
-

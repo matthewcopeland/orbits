@@ -7,15 +7,7 @@ $sun-color: $lightorange;
   display: block;
   @include circle($sun-size);
   @include center($sun-size);
-
   @include radial-gradient(50% 50%, circle closest-side, $sun-color, rgba($sun-color, 0.0) );
-
-  @include transform( scale(1) );
-  @include animation-name(zoomin, pulse);
-  @include animation-duration($zoomin-animation-duration, $sunglow-animation-duration );
-  @include animation-delay( $zoomin-animation-delay, $sunglow-animation-delay );
-  @include animation-iteration-count( $zoomin-animation-iteration-count, infinite );
-  @include animation-direction( alternate );
-  @include animation-timing-function( linear );
+  @include animation(pulse $sunglow-animation-duration $sunglow-animation-delay alternate infinite linear);
 }
 

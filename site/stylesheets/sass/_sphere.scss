@@ -10,7 +10,7 @@
 
 
 @function sphere-inset-shadow($size) {
-  @return inset (-$size/20) (-$size/20) $size/10 0 rgba(0,0,0, 0.6);
+  @return inset (-$size/10) (-$size/10) $size/10 0 rgba(0,0,0, 0.6);
 }
 
 
