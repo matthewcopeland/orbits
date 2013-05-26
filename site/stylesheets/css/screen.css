@@ -197,9 +197,9 @@ body {
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  -webkit-animation: zoomin 8s 0 linear, zoomout 10s 20.6s linear;
-  -moz-animation: zoomin 8s 0 linear, zoomout 10s 20.6s linear;
-  animation: zoomin 8s 0 linear, zoomout 10s 20.6s linear; }
+  -webkit-animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear;
+  -moz-animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear;
+  animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear; }
 
 #sun {
   position: fixed;
@@ -215,9 +215,9 @@ body {
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #f59f1a), color-stop(100%, rgba(245, 159, 26, 0)));
   background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #f59f1a, rgba(245, 159, 26, 0));
   background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0));
-  -webkit-animation: pulse 1.8s 8s alternate infinite linear;
-  -moz-animation: pulse 1.8s 8s alternate infinite linear;
-  animation: pulse 1.8s 8s alternate infinite linear; }
+  -webkit-animation: pulse 1.8s 4s alternate infinite linear;
+  -moz-animation: pulse 1.8s 4s alternate infinite linear;
+  animation: pulse 1.8s 4s alternate infinite linear; }
 
 .orbit {
   display: block;
@@ -232,9 +232,9 @@ body {
   -webkit-animation-name: orbit;
   -moz-animation-name: orbit;
   animation-name: orbit;
-  -webkit-animation-delay: 11.6s;
-  -moz-animation-delay: 11.6s;
-  animation-delay: 11.6s;
+  -webkit-animation-delay: 7.6s;
+  -moz-animation-delay: 7.6s;
+  animation-delay: 7.6s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -242,122 +242,122 @@ body {
   -moz-animation-timing-function: linear;
   animation-timing-function: linear; }
   .orbit:nth-of-type(1) {
-    height: 432px;
-    width: 432px;
-    border-radius: 216px;
-    border-radius: 216px;
+    height: 360px;
+    width: 360px;
+    border-radius: 180px;
+    border-radius: 180px;
     left: 50%;
-    margin-left: -216px;
+    margin-left: -180px;
     top: 50%;
-    margin-top: -216px;
+    margin-top: -180px;
     -webkit-animation-duration: 3.6s;
     -moz-animation-duration: 3.6s;
     animation-duration: 3.6s; }
   .orbit:nth-of-type(2) {
-    height: 504.0px;
-    width: 504.0px;
-    border-radius: 252.0px;
-    border-radius: 252.0px;
+    height: 420px;
+    width: 420px;
+    border-radius: 210px;
+    border-radius: 210px;
     left: 50%;
-    margin-left: -252.0px;
+    margin-left: -210px;
     top: 50%;
-    margin-top: -252.0px;
+    margin-top: -210px;
     -webkit-animation-duration: 4.2s;
     -moz-animation-duration: 4.2s;
     animation-duration: 4.2s; }
   .orbit:nth-of-type(3) {
-    height: 576px;
-    width: 576px;
-    border-radius: 288px;
-    border-radius: 288px;
+    height: 480px;
+    width: 480px;
+    border-radius: 240px;
+    border-radius: 240px;
     left: 50%;
-    margin-left: -288px;
+    margin-left: -240px;
     top: 50%;
-    margin-top: -288px;
+    margin-top: -240px;
     -webkit-animation-duration: 4.8s;
     -moz-animation-duration: 4.8s;
     animation-duration: 4.8s; }
   .orbit:nth-of-type(4) {
-    height: 648px;
-    width: 648px;
-    border-radius: 324px;
-    border-radius: 324px;
+    height: 540px;
+    width: 540px;
+    border-radius: 270px;
+    border-radius: 270px;
     left: 50%;
-    margin-left: -324px;
+    margin-left: -270px;
     top: 50%;
-    margin-top: -324px;
+    margin-top: -270px;
     -webkit-animation-duration: 5.4s;
     -moz-animation-duration: 5.4s;
     animation-duration: 5.4s; }
   .orbit:nth-of-type(5) {
-    height: 720px;
-    width: 720px;
-    border-radius: 360px;
-    border-radius: 360px;
+    height: 600px;
+    width: 600px;
+    border-radius: 300px;
+    border-radius: 300px;
     left: 50%;
-    margin-left: -360px;
+    margin-left: -300px;
     top: 50%;
-    margin-top: -360px;
+    margin-top: -300px;
     -webkit-animation-duration: 6s;
     -moz-animation-duration: 6s;
     animation-duration: 6s; }
   .orbit:nth-of-type(6) {
-    height: 792.0px;
-    width: 792.0px;
-    border-radius: 396.0px;
-    border-radius: 396.0px;
+    height: 660px;
+    width: 660px;
+    border-radius: 330px;
+    border-radius: 330px;
     left: 50%;
-    margin-left: -396.0px;
+    margin-left: -330px;
     top: 50%;
-    margin-top: -396.0px;
+    margin-top: -330px;
     -webkit-animation-duration: 6.6s;
     -moz-animation-duration: 6.6s;
     animation-duration: 6.6s; }
   .orbit:nth-of-type(7) {
-    height: 864.0px;
-    width: 864.0px;
-    border-radius: 432.0px;
-    border-radius: 432.0px;
+    height: 720.0px;
+    width: 720.0px;
+    border-radius: 360.0px;
+    border-radius: 360.0px;
     left: 50%;
-    margin-left: -432.0px;
+    margin-left: -360.0px;
     top: 50%;
-    margin-top: -432.0px;
+    margin-top: -360.0px;
     -webkit-animation-duration: 7.2s;
     -moz-animation-duration: 7.2s;
     animation-duration: 7.2s; }
   .orbit:nth-of-type(8) {
-    height: 936px;
-    width: 936px;
-    border-radius: 468px;
-    border-radius: 468px;
+    height: 780px;
+    width: 780px;
+    border-radius: 390px;
+    border-radius: 390px;
     left: 50%;
-    margin-left: -468px;
+    margin-left: -390px;
     top: 50%;
-    margin-top: -468px;
+    margin-top: -390px;
     -webkit-animation-duration: 7.8s;
     -moz-animation-duration: 7.8s;
     animation-duration: 7.8s; }
   .orbit:nth-of-type(9) {
-    height: 1008.0px;
-    width: 1008.0px;
-    border-radius: 504.0px;
-    border-radius: 504.0px;
+    height: 840px;
+    width: 840px;
+    border-radius: 420px;
+    border-radius: 420px;
     left: 50%;
-    margin-left: -504.0px;
+    margin-left: -420px;
     top: 50%;
-    margin-top: -504.0px;
+    margin-top: -420px;
     -webkit-animation-duration: 8.4s;
     -moz-animation-duration: 8.4s;
     animation-duration: 8.4s; }
   .orbit:nth-of-type(10) {
-    height: 1080px;
-    width: 1080px;
-    border-radius: 540px;
-    border-radius: 540px;
+    height: 900px;
+    width: 900px;
+    border-radius: 450px;
+    border-radius: 450px;
     left: 50%;
-    margin-left: -540px;
+    margin-left: -450px;
     top: 50%;
-    margin-top: -540px;
+    margin-top: -450px;
     -webkit-animation-duration: 9s;
     -moz-animation-duration: 9s;
     animation-duration: 9s; }
@@ -374,3 +374,96 @@ body {
   border-radius: 15px;
   box-shadow: inset -3px -3px 3px 0 rgba(0, 0, 0, 0.6);
   background: #006fab; }
+
+@-webkit-keyframes subtitles {
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes subtitles {
+  to {
+    opacity: 1; } }
+
+@-o-keyframes subtitles {
+  to {
+    opacity: 1; } }
+
+@keyframes subtitles {
+  to {
+    opacity: 1; } }
+
+#subtitles {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px; }
+  #subtitles p {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-family: arial;
+    text-align: left;
+    font-size: 51px;
+    opacity: 0; }
+    #subtitles p:nth-of-type(1) {
+      -webkit-animation-name: subtitles;
+      -moz-animation-name: subtitles;
+      animation-name: subtitles;
+      -webkit-animation-duration: 6.32s;
+      -moz-animation-duration: 6.32s;
+      animation-duration: 6.32s;
+      -webkit-animation-delay: 0s;
+      -moz-animation-delay: 0s;
+      animation-delay: 0s; }
+    #subtitles p:nth-of-type(2) {
+      -webkit-animation-name: subtitles;
+      -moz-animation-name: subtitles;
+      animation-name: subtitles;
+      -webkit-animation-duration: 6.32s;
+      -moz-animation-duration: 6.32s;
+      animation-duration: 6.32s;
+      -webkit-animation-delay: 6.32s;
+      -moz-animation-delay: 6.32s;
+      animation-delay: 6.32s; }
+    #subtitles p:nth-of-type(3) {
+      -webkit-animation-name: subtitles;
+      -moz-animation-name: subtitles;
+      animation-name: subtitles;
+      -webkit-animation-duration: 6.32s;
+      -moz-animation-duration: 6.32s;
+      animation-duration: 6.32s;
+      -webkit-animation-delay: 12.64s;
+      -moz-animation-delay: 12.64s;
+      animation-delay: 12.64s; }
+    #subtitles p:nth-of-type(4) {
+      -webkit-animation-name: subtitles;
+      -moz-animation-name: subtitles;
+      animation-name: subtitles;
+      -webkit-animation-duration: 6.32s;
+      -moz-animation-duration: 6.32s;
+      animation-duration: 6.32s;
+      -webkit-animation-delay: 18.96s;
+      -moz-animation-delay: 18.96s;
+      animation-delay: 18.96s; }
+    #subtitles p:nth-of-type(5) {
+      -webkit-animation-name: subtitles;
+      -moz-animation-name: subtitles;
+      animation-name: subtitles;
+      -webkit-animation-duration: 6.32s;
+      -moz-animation-duration: 6.32s;
+      animation-duration: 6.32s;
+      -webkit-animation-delay: 25.28s;
+      -moz-animation-delay: 25.28s;
+      animation-delay: 25.28s; }
+    #subtitles p:nth-of-type(5) {
+      -webkit-animation-duration: 12.64s;
+      -moz-animation-duration: 12.64s;
+      animation-duration: 12.64s; }
+    #subtitles p:nth-of-type(4), #subtitles p:nth-of-type(3) {
+      text-align: right; }
+    #subtitles p:last-of-type {
+      position: fixed;
+      top: 30%;
+      width: 12em;
+      text-align: center;
+      left: 50%;
+      margin-left: -6em; }

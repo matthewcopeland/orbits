@@ -1,0 +1,50 @@
+$msg-count: 5;
+$msg-time: ($total-animation-time + 2s)/($msg-count);
+
+
+@include keyframes(subtitles) {
+  to { opacity: 1; }
+}
+
+
+@mixin subtitles {
+  @for $i from 1 through $msg-count {
+    &:nth-of-type(#{$i}) {
+      @include animation-name(subtitles);
+      @include animation-duration($msg-time);
+      @include animation-delay( $msg-time * ($i - 1) );
+    }
+  }
+
+  &:nth-of-type(#{$msg-count}) { @include animation-duration($msg-time*2); }
+  &:nth-of-type(#{$msg-count - 1}),
+  &:nth-of-type(#{$msg-count - 2}), { text-align: right; }
+}
+
+
+#subtitles {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+
+  p {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-family: arial;
+    text-align: left;
+    font-size: 51px;
+    opacity: 0;
+    @include subtitles;
+
+    &:last-of-type {
+      $title-width: 12em;
+      position: fixed;
+      top: 30%;
+      width: $title-width;
+      text-align: center;
+      @include horizontal-center( $title-width );
+    }
+  }
+}
