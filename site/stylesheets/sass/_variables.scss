@@ -28,3 +28,21 @@ $sunglow-total-duration: $sunglow-animation-duration * $sunglow-animation-iterat
 $orbit-animation-delay: $zoomin-animation-duration + $sunglow-total-duration;
 $orbit-animation-duration: 3s;
 
+
+
+
+
+// A little cheat to know the total animation time.
+
+$total-animation-time:
+    $zoomin-animation-duration
+  + $sunglow-total-duration
+  + $orbit-animation-duration;
+
+// .space:before {
+//   content: "#{$total-animation-time}";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   color: white;
+// }

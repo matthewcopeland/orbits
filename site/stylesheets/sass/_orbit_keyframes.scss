@@ -1,14 +1,12 @@
 // animations
 
 
-
-
 // glow keyframe animation
 //--------------------------
 // this glow creates the definition of a keyframe animation.
 // it does not actually apply that animation to a specific element.
-// example use to define a glow-keyframes.
 // @include glow-keyframes(starglow, $star-size, $star-color);
+
 
 
 @mixin glow-keyframes($name, $size, $color) {
@@ -31,20 +29,11 @@
 
 
 
-@include keyframes(orbit){
+@include keyframes(orbit) {
   @for $i from 1 through 4 {
-    50% { opacity: 1; }
+    50% { opacity: .8; }
     #{$i*25%} { @include transform( rotate3d(0,0,1, #{$i*90}deg) ); }
   }
 }
 
 
-
-
-
-// fadein keyframe animation
-//------------------------------
-@include keyframes(fadein) {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}

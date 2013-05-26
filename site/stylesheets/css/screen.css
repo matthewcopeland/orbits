@@ -29,140 +29,109 @@ html, body {
 
 @-webkit-keyframes orbit {
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   25% {
     -webkit-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   50% {
     -webkit-transform: rotate3d(0, 0, 1, 180deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   75% {
     -webkit-transform: rotate3d(0, 0, 1, 270deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   100% {
     -webkit-transform: rotate3d(0, 0, 1, 360deg); } }
 
 @-moz-keyframes orbit {
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   25% {
     -moz-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   50% {
     -moz-transform: rotate3d(0, 0, 1, 180deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   75% {
     -moz-transform: rotate3d(0, 0, 1, 270deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   100% {
     -moz-transform: rotate3d(0, 0, 1, 360deg); } }
 
 @-o-keyframes orbit {
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   25% {
     -o-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   50% {
     -o-transform: rotate3d(0, 0, 1, 180deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   75% {
     -o-transform: rotate3d(0, 0, 1, 270deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   100% {
     -o-transform: rotate3d(0, 0, 1, 360deg); } }
 
 @keyframes orbit {
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   25% {
     transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   50% {
     transform: rotate3d(0, 0, 1, 180deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   75% {
     transform: rotate3d(0, 0, 1, 270deg); }
 
   50% {
-    opacity: 1; }
+    opacity: .8; }
 
   100% {
     transform: rotate3d(0, 0, 1, 360deg); } }
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-
-@-moz-keyframes fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-
-@-o-keyframes fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-
-@keyframes fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
 
 body {
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
   perspective: 500px;
-  background-color: #070d10;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #070d10), color-stop(100%, #162934));
-  background-image: -webkit-linear-gradient(top, #070d10 70%, #162934);
-  background-image: linear-gradient(to bottom,#070d10 70%, #162934);
+  background: #070d10;
   background-attachment: fixed; }
 
 .space {

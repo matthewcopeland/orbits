@@ -39,7 +39,6 @@ $orbit-size: $sun-size*2;
   @include vertical-middle($earth-size);
   @include circle($earth-size);
   background: $darkblue;
-  // background-image: -webkit-radial-gradient(50% 50%, circle closest-side, $darkblue, rgba($darkblue, 0.0) );
 }
 
 

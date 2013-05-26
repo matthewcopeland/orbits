@@ -3,7 +3,8 @@
 
 body {
   @include perspective( 500px );
-  @include linear-gradient(top, darken($blackblue, 10) 70%, $blackblue);
+  background: darken($blackblue, 10);
+  // @include linear-gradient(top, darken($blackblue, 10) 70%, $blackblue);
   background-attachment: fixed;
 }
 
