@@ -131,8 +131,7 @@ body {
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
   perspective: 500px;
-  background: #070d10;
-  background-attachment: fixed; }
+  background: #070d10; }
 
 .space {
   position: fixed;
