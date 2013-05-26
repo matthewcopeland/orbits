@@ -1,5 +1,6 @@
 // spacey stuff
 
+
 body {
   @include perspective( 500px );
   @include linear-gradient(top, darken($blackblue, 10) 70%, $blackblue);
@@ -15,6 +16,6 @@ body {
 
 #milky-way {
   @include fill;
-  @include transform( rotateY(180deg) translate3d(0,0, $viewport-depth) );
-  // @include animation( zoomin 5s ease-out );
+  @include transform( rotate3d(0,1,0,180deg) translate3d(0,0, $viewport-depth) );
+  @include animation( zoomin $zoomin-animation-duration $zoomin-animation-delay ease-out );
 }

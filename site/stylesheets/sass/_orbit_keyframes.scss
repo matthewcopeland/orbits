@@ -25,17 +25,26 @@
 // zoomim keyframe animation
 //-------------------------------
 @include keyframes(zoomin) {
-  0%  { @include transform( rotateY(180deg) translate3d(0,0,$vanishing-point) ); }
-  70% { @include transform( rotateY(180deg) translate3d(0,0,$viewport-depth) ); }
+  from  { @include transform( rotate3d(0,1,0,180deg) translate3d(0,0, $vanishing-point) ); }
+  // to { @include transform( rotate3d(0,1,0,180deg) translate3d(0,0, $viewport-depth) ); }
 }
 
 
 
 @include keyframes(orbit){
   @for $i from 1 through 4 {
+    50% { opacity: 1; }
     #{$i*25%} { @include transform( rotate3d(0,0,1, #{$i*90}deg) ); }
   }
 }
 
 
 
+
+
+// fadein keyframe animation
+//------------------------------
+@include keyframes(fadein) {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

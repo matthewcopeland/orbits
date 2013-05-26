@@ -7,5 +7,5 @@
   @include center($sun-size);
   background: $sun-color;
   box-shadow: 0 0 $sun-size*2 $sun-size/4 $sun-color;
-  // @include animation(sunglow $sun-glow-animation-duration alternate infinite );
+  @include animation(sunglow $sunglow-animation-duration $sunglow-animation-delay alternate $sunglow-animation-iteration-count );
 }

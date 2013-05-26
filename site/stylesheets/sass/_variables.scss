@@ -15,6 +15,16 @@ $viewport-depth: $sun-size*2;
 
 
 // animation variables
-$sun-glow-animation-duration: 1.8s;
-$orbit-animation-duration: 4s;
-$orbit-animation-delay: 0;
+$zoomin-animation-delay: 0;
+$zoomin-animation-duration: 5s;
+
+
+$sunglow-animation-delay: $zoomin-animation-duration;
+$sunglow-animation-duration: 1.8s;
+$sunglow-animation-iteration-count: 3;
+$sunglow-total-duration: $sunglow-animation-duration * $sunglow-animation-iteration-count;
+
+
+$orbit-animation-delay: $zoomin-animation-duration + $sunglow-total-duration;
+$orbit-animation-duration: 3s;
+
