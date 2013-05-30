@@ -1,5 +1,6 @@
 $msg-count: 5;
-$msg-time: ($total-animation-time + 2s)/($msg-count);
+$msg-lead-time: 2s;
+$msg-time: ($total-animation-time + $msg-lead-time)/($msg-count);
 
 
 @include keyframes(subtitles) {
@@ -16,6 +17,7 @@ $msg-time: ($total-animation-time + 2s)/($msg-count);
     }
   }
 
+  // cleanup with @if
   &:nth-of-type(#{$msg-count}) { @include animation-duration($msg-time*2); }
   &:nth-of-type(#{$msg-count - 1}),
   &:nth-of-type(#{$msg-count - 2}), { text-align: right; }
