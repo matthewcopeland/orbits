@@ -1,9 +1,9 @@
-Orbits - WIP
-==============
+Orbits
+=======
 
 Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday.
 
-For the working talk, checkout talk.md.
+For the working talk, checkout [talk.md](https://github.com/matthewcopeland/orbits/blob/master/talk.md).
 
 
 ## Setup
