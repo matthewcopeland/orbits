@@ -3,9 +3,10 @@ Talk for Awayday
 
 Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday.
 
+## Our goal
 
-## Opening
-* Here's what we're going for: http://youtu.be/CI5oZjKps-w
+### Live demo: http://orbits.matthewcopeland.me
+### Video: http://youtu.be/CI5oZjKps-w
 
 
 ## Space
@@ -124,7 +125,7 @@ We want to do some stuff to the 2nd-half of the subtitles and the last-subtitle.
 
 
 ## PLAY TIME!
-* Now that our animations are all lined up. It's time to have some fun. Change variables, mess with the orbit sizing function, add a planet-sizing function, etc.
+Now that our animations are all lined up. It's time to have some fun. Change variables, mess with the orbit sizing function, add a planet-sizing function, etc.
 
 
 
