@@ -74,11 +74,4 @@ Before we can make a planet, we need to make an orbit. The orbit is what we'll b
 * Lea Verou's animation's with one keyframe. http://lea.verou.me/2012/12/animations-with-one-keyframe
 * David DeSandro on 3D transforms http://24ways.org/2010/intro-to-css-3d-transforms
 * W3 http://www.w3.org/TR/css3-transforms
-* Paul Hayes' 3D css sphere http://www.paulrhayes.com/2011-02/creating-a-sphere-with-3d-css
-* Custom sass script http://victorcoulon.fr/generating-random-color-in-sass and http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#adding_custom_functions
 * Bourbon http://bourbon.io
-
-### Galactic stuff
-* http://solarsystem.nasa.gov/planets
-* http://en.wikipedia.org/wiki/Moon
-* http://www.universetoday.com/20489/moon-compared-to-Earth
