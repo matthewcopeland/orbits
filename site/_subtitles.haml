@@ -1,0 +1,16 @@
+/ add with
+/ = haml :'_subtitles'
+
+#subtitles
+  - subtitles.each do |stitle|
+    %p
+      %span What if I told you..
+      - 2.times do
+        %br
+      = stitle
+  %p Want to see how flexible it is?
+  %p
+    Orbits.
+    - 2.times do
+      %br
+    These aren't your grandma's stylesheets.
