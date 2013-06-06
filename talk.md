@@ -9,6 +9,50 @@ Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday.
 ### Video: http://youtu.be/CI5oZjKps-w
 
 
+## Tools
+
+### Sass
+Our goal *(a highly flexible, modular and maintainable animation)* would extremely tedious with static css. To give us what we want, we'll be utilizing [Sass](http://sass-lang.com).
+Some of the key features of sass that we'll be using:
+
+* [$variables]() to drive our layouts and simplify tweaks/refactoring.
+* [@mixin]()s
+* [@function]()
+* [@for]()
+* [darken hsl function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
+* [rgba() function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#rgba-instance_method)
+
+### Bourbon
+A lightweight sass-library to support vendor prefixing.
+
+## CSS Keyframe animations
+### Keyframes
+keyframes or steps to animate between.
+```scss
+//example
+@-keyframes foo {
+  0% {  }
+}
+
+### Animation
+Apply a set of keyframes to an element.
+
+```scss
+//example implementing the foo keyframes from above
+.bar {
+  animation-name: foo; //
+
+  animation-duration: 3s; // duration for the animation to last.
+  animation-delay: 1s; // amount of time to wait before starting the animation. defaults to 0.
+
+  animation-iteration-count: infinite; // number of times to repeat the animation. can also be a number. defaults to 1.
+  animation-direction: alternate; // direction to play the keyframes.  forward, backward, alternate.
+
+}
+```
+
+
+
 ## Space
 
 ### The 'darken' function
@@ -29,10 +73,9 @@ In this utility, we'll need to include a few things: `height`, `width`.
 
 ```scss
 @mixin circle($size) {
-  display: block;
   height: $size;
   width: $size;
-  @include border-radius($size/2);
+  @include border-radius( 50% );
 }
 ```
 
@@ -136,4 +179,10 @@ Now that our animations are all lined up. It's time to have some fun. Change var
 * Lea Verou's animation's with one keyframe. http://lea.verou.me/2012/12/animations-with-one-keyframe
 * David DeSandro on 3D transforms http://24ways.org/2010/intro-to-css-3d-transforms
 * W3 http://www.w3.org/TR/css3-transforms
+* Chris Coyier on `display: table; display: table-cell;` - http://css-tricks.com/centering-in-the-unknown
+### Sass stuffs
+* [Sass functions](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html)
 * Bourbon http://bourbon.io
+
+## Feedback
+* A page on what sass and bourbon do.
