@@ -24,6 +24,7 @@
 }
 
 
+
 @mixin circle($size) {
   height: $size;
   width: $size;
@@ -32,13 +33,7 @@
 
 
 
-@function sphere-inset-shadow($size) {
-  @return inset (-$size/10) (-$size/10) $size/10 0 rgba(0,0,0, 0.6);
-}
-
-
-
 @mixin sphere($size) {
   @include circle($size);
-  box-shadow: sphere-inset-shadow($size);
+  box-shadow: inset (-$size/10) (-$size/10) $size/10 0 rgba(0,0,0, 0.6);
 }
