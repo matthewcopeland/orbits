@@ -199,7 +199,9 @@ Apply a set of keyframes to an element and tell it how long the animation will l
 ```
 
 ```scss
-.foo { animation: foo 3s; }  // shorthand syntax
+.foo {
+  animation: pulse 3s; // shorthand syntax
+}
 ```
 
 
