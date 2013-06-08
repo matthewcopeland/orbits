@@ -84,17 +84,15 @@ Using `rotate3d` you can specify multiple axis and also receive some browser per
 The following will all rotate 180 degrees around around the X-axis.
 
 ```css
-.foo {
-  transform: rotate( 180deg );
+.foo { transform: rotate( 180deg ); }
 
-  transform: rotateX( 180deg );
+.foo { transform: rotateX( 180deg ); }
 
-  transform: rotate3d( 1, 0, 0, 180deg);
+.foo { transform: rotate3d( 1, 0, 0, 180deg); }
 
-  transform: rotate3d( .5, 0, 0, 360deg);
+.foo { transform: rotate3d( .5, 0, 0, 360deg); }
 
-  transform: rotate3d( 2, 0, 0, 90deg);
-}
+.foo { transform: rotate3d( 2, 0, 0, 90deg); }
 ```
 
 ##### Rotate around the Y-axis.
@@ -102,15 +100,13 @@ The following will all rotate 180 degrees around around the X-axis.
 The following will all rotate 180 degrees around around the Y-axis.
 
 ```css
-.foo {
-  transform: rotateY( 180deg );
+.foo { transform: rotateY( 180deg ); }
 
-  transform: rotate3d( 0, 1, 0, 180deg);
+.foo { transform: rotate3d( 0, 1, 0, 180deg); }
 
-  transform: rotate3d(  0, .5, 0, 360deg);
+.foo { transform: rotate3d(  0, .5, 0, 360deg); }
 
-  transform: rotate3d( 0, 2, 0, 90deg);
-}
+.foo { transform: rotate3d( 0, 2, 0, 90deg); }
 ```
 
 ##### Rotate around the Z-axis.
@@ -118,15 +114,13 @@ The following will all rotate 180 degrees around around the Y-axis.
 The following will all rotate 180 degrees around around the Z-axis.
 
 ```css
-.foo {
-  transform: rotateZ( 180deg );
+.foo { transform: rotateZ( 180deg ); }
 
-  transform: rotate3d( 0, 0, 1, 180deg);
+.foo { transform: rotate3d( 0, 0, 1, 180deg); }
 
-  transform: rotate3d(  0, 0, .5, 360deg);
+.foo { transform: rotate3d(  0, 0, .5, 360deg); }
 
-  transform: rotate3d( 0, 0, 2, 90deg);
-}
+.foo { transform: rotate3d( 0, 0, 2, 90deg); }
 ```
 
 
