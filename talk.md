@@ -74,13 +74,9 @@ Outputs:
 Scales an element based on its size.
 
 ```scss
-.foo {
-  transform: scale( 0.1 );
-}
+.foo { transform: scale( 0.1 ); }
 
-.bar {
-  transform: scale( 2.3 );
-}
+.bar { transform: scale( 2.3 ); }
 ```
 
 
@@ -101,21 +97,13 @@ You can rotate an element around its X, Y and Z axes. There are a few ways to ro
 
 
 ```scss
-.foo {
-  transform: rotate( 180deg );  // default rotates X
-}
+.foo { transform: rotate( 180deg ); } // default rotates X
 
-.foo {
-  transform: rotateX( 180deg ); // rotates X
-}
+.foo { transform: rotateX( 180deg ); } // rotates X
 
-.foo {
-  transform: rotateY( 180deg ); // rotates Y
-}
+.foo { transform: rotateY( 180deg ); } // rotates Y
 
-.foo {
-  transform: rotateZ( 180deg ); // rotates Z
-}
+.foo { transform: rotateZ( 180deg ); } // rotates Z
 ```
 
 
@@ -125,16 +113,12 @@ You gain improved-preformance from (some) webkit browsers by using `rotate3d`. S
 
 The syntax for `rotate3d` requires 4-arguments: X, Y, Z, and degrees to rotate.
 ```scss
-.foo {
-  transform: rotate3d( x, y, z, deg )
-}
+.foo { transform: rotate3d( x, y, z, deg ) }
 ```
 
 The axes' rotations are product of the degree-value and the axis-value.
 ```scss
-.foo {
-  transform: rotate3d( x*deg, y*deg, z*deg, deg );
-}
+.foo { transform: rotate3d( x*deg, y*deg, z*deg, deg ); }
 ```
 
 
@@ -144,25 +128,15 @@ The axes' rotations are product of the degree-value and the axis-value.
 The following will all rotate 180 degrees around around the X-axis.
 
 ```scss
-.foo {
-  transform: rotate( 180deg );
-}
+.foo { transform: rotate( 180deg ); }
 
-.foo {
-  transform: rotateX( 180deg );
-}
+.foo { transform: rotateX( 180deg ); }
 
-.foo {
-  transform: rotate3d( 1, 0, 0, 180deg );
-}
+.foo { transform: rotate3d( 1, 0, 0, 180deg ); }
 
-.foo {
-  transform: rotate3d( .5, 0, 0, 360deg );
-}
+.foo { transform: rotate3d( .5, 0, 0, 360deg ); }
 
-.foo {
-  transform: rotate3d( 2, 0, 0, 90deg );
-}
+.foo { transform: rotate3d( 2, 0, 0, 90deg ); }
 ```
 
 
@@ -172,21 +146,13 @@ The following will all rotate 180 degrees around around the X-axis.
 The following will all rotate 180 degrees around around the Y-axis.
 
 ```scss
-.foo {
-  transform: rotateY( 180deg );
-}
+.foo { transform: rotateY( 180deg ); }
 
-.foo {
-  transform: rotate3d( 0, 1, 0, 180deg );
-}
+.foo { transform: rotate3d( 0, 1, 0, 180deg ); }
 
-.foo {
-  transform: rotate3d(  0, .5, 0, 360deg );
-}
+.foo { transform: rotate3d(  0, .5, 0, 360deg ); }
 
-.foo {
-  transform: rotate3d( 0, 2, 0, 90deg );
-}
+.foo { transform: rotate3d( 0, 2, 0, 90deg ); }
 ```
 
 
@@ -196,21 +162,13 @@ The following will all rotate 180 degrees around around the Y-axis.
 The following will all rotate 180 degrees around around the Z-axis.
 
 ```scss
-.foo {
-  transform: rotateZ( 180deg );
-}
+.foo { transform: rotateZ( 180deg ); }
 
-.foo {
-  transform: rotate3d( 0, 0, 1, 180deg );
-}
+.foo { transform: rotate3d( 0, 0, 1, 180deg ); }
 
-.foo {
-  transform: rotate3d(  0, 0, .5, 360deg );
-}
+.foo { transform: rotate3d(  0, 0, .5, 360deg ); }
 
-.foo {
-  transform: rotate3d( 0, 0, 2, 90deg );
-}
+.foo { transform: rotate3d( 0, 0, 2, 90deg ); }
 ```
 
 
@@ -225,13 +183,8 @@ This does not envoke an animation, but simply defines the keyframes/steps to ani
 
 ```scss
 @-keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(2);
-  }
+  0%    { transform: scale(1); }
+  100%  { transform: scale(2); }
 }
 ```
 
@@ -245,13 +198,8 @@ Apply a set of keyframes to an element and tell it how long the animation will l
 }
 ```
 
-
-##### Shorthand animation syntax
-
 ```scss
-.bar {
-  animation: foo 3s; // shorthand syntax
-}
+.foo { animation: foo 3s; }  // shorthand syntax
 ```
 
 
