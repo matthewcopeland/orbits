@@ -11,8 +11,8 @@ Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday. [#2013naa
 
 ## What we'll be learing about
 * Some Sass features
+* CSS Transforms (scale and rotate)
 * CSS Keyframe animations
-
 
 
 ### Sass features
@@ -50,6 +50,87 @@ Outputs:
 ```
 
 
+***
+
+### CSS Transforms
+
+#### Scale
+Scales an element based on its size.
+
+```css
+.foo {
+  transform: scale( 0.1 );
+}
+
+.bar {
+  transform: scale( 2.3 );
+}
+```
+
+
+
+***
+
+
+
+
+#### Rotate and rotate3d
+You can rotate an element around its X, Y and Z axis. There are a few ways to specify the axis.
+
+Using `rotate3d` you can specify multiple axis and also receive some browser performance perks from webkit browsers. (See DeSandro's article in the resources below).
+
+##### Rotate around the X-axis
+
+The following will all rotate 180 degrees around around the X-axis.
+
+```css
+.foo {
+  transform: rotate( 180deg );
+
+  transform: rotateX( 180deg );
+
+  transform: rotate3d( 1, 0, 0, 180deg);
+
+  transform: rotate3d( .5, 0, 0, 360deg);
+
+  transform: rotate3d( 2, 0, 0, 90deg);
+}
+```
+
+##### Rotate around the Y-axis.
+
+The following will all rotate 180 degrees around around the Y-axis.
+
+```css
+.foo {
+  transform: rotateY( 180deg );
+
+  transform: rotate3d( 0, 1, 0, 180deg);
+
+  transform: rotate3d(  0, .5, 0, 360deg);
+
+  transform: rotate3d( 0, 2, 0, 90deg);
+}
+```
+
+##### Rotate around the Z-axis.
+
+The following will all rotate 180 degrees around around the Z-axis.
+
+```css
+.foo {
+  transform: rotateZ( 180deg );
+
+  transform: rotate3d( 0, 0, 1, 180deg);
+
+  transform: rotate3d(  0, 0, .5, 360deg);
+
+  transform: rotate3d( 0, 0, 2, 90deg);
+}
+```
+
+
+***
 
 
 ### CSS Keyframe animations
@@ -126,7 +207,7 @@ To center the element, I've made a `@mixin`.
 ## Orbits & Planets
 
 ### Orbit
-Before we can make a planet, we need to make an orbit. Then we'll put the planet inside the orbit. This will let us animate the orbit and the planet will naturally stay
+Before we can make a planet, we need to make an orbit. Then we'll put the planet inside the orbit. This will let us animate the orbit and the planet will naturally move with its orbit.
 
 * Base the `$orbit-size` on `$sun-size`.
 * Reuse the circle `@mixin`.
@@ -147,14 +228,7 @@ Before we can make a planet, we need to make an orbit. Then we'll put the planet
 * Use ruby to quickly create multiple obits/planets.
 * Use a `@for` loop to enlarge the size of each orbit and position it.
 * Create the sizing-loop to make the process easier.
-
-
-### The orbit/planet animation.
-
-The orbit is what we'll be rotating around the sun. By rotating the orbit, the planet will move with it.
-
-* Count the number of orbits/planets.
-
+* Animate the orbits.
 
 
 
