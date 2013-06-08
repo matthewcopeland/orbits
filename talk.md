@@ -162,10 +162,14 @@ Apply a set of keyframes to an element and tell it how long the animation will l
 
 
 
-## Milky-way
+## Time to start building
 
-### Variables and the `darken()` function
-The milky-way utilzes a variable from our color palette and `darken()` function. The `darken` and `lighten` functions allow you to move through the HSL color-space. This can be quite useful when you want to stay consistent within your color-palette and need to create some contrast.  You'll see this become more useful in the Earth.
+
+### Variable-driven colors and the `darken` function
+
+Set the body's `background-color` using a variable from our color palette and `darken()` function.
+
+The `darken` and `lighten` functions allow you to move through the HSL color-space. This can be quite useful when need to create some contrast and already have a color-palette.
 
 
 
