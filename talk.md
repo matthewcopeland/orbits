@@ -15,11 +15,13 @@ Look at some of the powerful features of [sass](http://sass-lang.com) and how us
 
 
 
-## What we'll be learning about today
-* Sass features
-* Bourbon pattern library
-* CSS transforms (scale and rotate)
-* CSS keyframe animations
+## We'll be looking at..
+* Touch on the Sass features.
+* Bourbon sass pattern library.
+* CSS transforms (scale and rotate).
+* CSS keyframe animations.
+* How to use the above to create the demo.
+
 
 
 ### Sass features
