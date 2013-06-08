@@ -1,24 +1,31 @@
-Talk for Awayday
-===================
+Orbits talk
+=============
 
-Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday. [#2013naad](https://twitter.com/search?q=%232013naad&src=hash)
-
-## Our goal
-
-### Live demo: http://orbits.matthewcopeland.me
-### Video: http://youtu.be/CI5oZjKps-w
+A stylesheet talk at 2013 ThoughtWorks North America Awayday. [#2013naad](https://twitter.com/search?q=%232013naad&src=hash)
 
 
-## What we'll be learing about
-* Some Sass features
-* CSS Transforms (scale and rotate)
-* CSS Keyframe animations
+## Purpose
+Look at some of the powerful features of [sass](http://sass-lang.com) and how use them to create modular, maintainable and highly-flexible css keyframe animations.
+
+
+
+## Demos
+* Live demo: http://orbits.matthewcopeland.me
+* Video: http://youtu.be/CI5oZjKps-w
+
+
+
+## What we'll be learning about today
+* Sass features
+* Bourbon pattern library
+* CSS transforms (scale and rotate)
+* CSS keyframe animations
 
 
 ### Sass features
 Our goal *(a highly flexible, modular and maintainable animation)* would extremely tedious with static css. To give us what we want, we'll be utilizing [Sass](http://sass-lang.com).
 
-Some of the key features of sass that we'll be using today:
+Sass features that we'll be using:
 
 * [@for](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id11) loops.
 * [@mixin](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins)s
@@ -28,7 +35,7 @@ Some of the key features of sass that we'll be using today:
 * [darken() sass function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
 
 ### Bourbon
-A lightweight sass-library to support css3 vendor prefixes. This allows your code to be much cleaner and more readable.
+A lightweight sass-library to support css3 vendor prefixes. We'll be using Bourbon to clean-up our code and make it more readable.
 
 #### Example
 
@@ -41,7 +48,7 @@ A lightweight sass-library to support css3 vendor prefixes. This allows your cod
 
 Outputs:
 
-```css
+```scss
 .foo {
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
@@ -52,12 +59,14 @@ Outputs:
 
 ***
 
+
+
 ### CSS Transforms
 
 #### Scale
 Scales an element based on its size.
 
-```css
+```scss
 .foo {
   transform: scale( 0.1 );
 }
@@ -74,53 +83,89 @@ Scales an element based on its size.
 
 
 
-#### Rotate and rotate3d
-You can rotate an element around its X, Y and Z axis. There are a few ways to specify the axis.
+#### Rotate
+You can rotate an element around its X, Y and Z axes. There are a few ways to rotate an element.
 
-Using `rotate3d` you can specify multiple axis and also receive some browser performance perks from webkit browsers. (See DeSandro's article in the resources below).
+* rotate( deg )
+* rotateX( deg )
+* rotateY( deg )
+* rotateZ( deg )
+* rotate3d( x, y, z, deg )
 
-##### Rotate around the X-axis
+
+```scss
+.foo { transform: rotate( 180deg ); } // default rotates X
+
+.foo { transform: rotateX( 180deg ); } // rotates X
+
+.foo { transform: rotateY( 180deg ); } // rotates Y
+
+.foo { transform: rotateZ( 180deg ); } // rotates Z
+```
+
+
+
+##### Rotate3d
+You gain improved-preformance from (some) webkit browsers by using `rotate3d`. See DeSandro's article in the [references](#references) below.
+
+The syntax for `rotate3d` requires 4-arguments: X, Y, Z, and degrees to rotate.
+```scss
+.foo {
+  transform: rotate3d( x, y, z, deg )
+}
+```
+
+The axes' rotations are product of the degree-value and the axis-value.
+```scss
+.foo {
+  transform: rotate3d( x, y, z, deg )
+}
+```
+
+
+
+##### Rotating the X-axis
 
 The following will all rotate 180 degrees around around the X-axis.
 
-```css
+```scss
 .foo { transform: rotate( 180deg ); }
 
 .foo { transform: rotateX( 180deg ); }
 
-.foo { transform: rotate3d( 1, 0, 0, 180deg); }
+.foo { transform: rotate3d( 1, 0, 0, 180deg ); }
 
-.foo { transform: rotate3d( .5, 0, 0, 360deg); }
+.foo { transform: rotate3d( .5, 0, 0, 360deg ); }
 
-.foo { transform: rotate3d( 2, 0, 0, 90deg); }
+.foo { transform: rotate3d( 2, 0, 0, 90deg ); }
 ```
 
-##### Rotate around the Y-axis.
+##### Rotating the Y-axis
 
 The following will all rotate 180 degrees around around the Y-axis.
 
-```css
+```scss
 .foo { transform: rotateY( 180deg ); }
 
-.foo { transform: rotate3d( 0, 1, 0, 180deg); }
+.foo { transform: rotate3d( 0, 1, 0, 180deg ); }
 
-.foo { transform: rotate3d(  0, .5, 0, 360deg); }
+.foo { transform: rotate3d(  0, .5, 0, 360deg ); }
 
-.foo { transform: rotate3d( 0, 2, 0, 90deg); }
+.foo { transform: rotate3d( 0, 2, 0, 90deg ); }
 ```
 
-##### Rotate around the Z-axis.
+##### Rotating the Z-axis
 
 The following will all rotate 180 degrees around around the Z-axis.
 
-```css
+```scss
 .foo { transform: rotateZ( 180deg ); }
 
-.foo { transform: rotate3d( 0, 0, 1, 180deg); }
+.foo { transform: rotate3d( 0, 0, 1, 180deg ); }
 
-.foo { transform: rotate3d(  0, 0, .5, 360deg); }
+.foo { transform: rotate3d(  0, 0, .5, 360deg ); }
 
-.foo { transform: rotate3d( 0, 0, 2, 90deg); }
+.foo { transform: rotate3d( 0, 0, 2, 90deg ); }
 ```
 
 
@@ -134,10 +179,9 @@ The following will all rotate 180 degrees around around the Z-axis.
 This does not envoke an animation, but simply defines the keyframes/steps to animate between.
 
 ```scss
-//example
-@-keyframes foo {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@-keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(2); }
 }
 ```
 
@@ -145,18 +189,18 @@ This does not envoke an animation, but simply defines the keyframes/steps to ani
 Apply a set of keyframes to an element and tell it how long the animation will last.
 
 ```scss
-//example implementing the foo keyframes from above
-
-.bar {
-  animation-name: foo;
+.foo {
+  animation-name: pulse;
   animation-duration: 3s;
 }
+```
 
 
-// or shorthand
+##### Shorthand animation syntax
 
+```scss
 .bar {
-  animation: foo 3s;
+  animation: foo 3s; // shorthand syntax
 }
 ```
 
