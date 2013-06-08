@@ -5,7 +5,7 @@ A stylesheet talk at 2013 ThoughtWorks North America Awayday. [#2013naad](https:
 
 
 ## Purpose
-Look at some of the powerful features of [sass](http://sass-lang.com) and how use them to create modular, maintainable and highly-flexible css keyframe animations.
+Look at how to use some of the powerful features of [SASS](http://sass-lang.com) to choreograph modular, maintainable and highly-flexible css keyframe animations. *A task that would extremely tedious with static css.*
 
 
 
@@ -16,32 +16,35 @@ Look at some of the powerful features of [sass](http://sass-lang.com) and how us
 
 
 ## We'll be looking at..
-* Touch on the Sass features.
-* Bourbon sass pattern library.
+* Touch on some SASS features.
+* Bourbon - a SASS pattern library.
 * CSS transforms (scale and rotate).
 * CSS keyframe animations.
 * How to use the above to create the demo.
 
 
 
-### Sass features
-Our goal *(a highly flexible, modular and maintainable animation)* would extremely tedious with static css. To give us what we want, we'll be utilizing [Sass](http://sass-lang.com).
-
-Sass features that we'll be using:
-
-* [@for](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id11) loops.
-* [@mixin](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins)s
+### SASS features
 * [$variables](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_) to drive our layouts and simplify tweaks/refactoring.
+* [@mixins](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins)
+* [@for](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id11) loops.
 * [@function](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#function_directives)
-* [rgba() sass function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#rgba-instance_method)
-* [darken() sass function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
+* [darken() function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
+
 
 ### Bourbon
-A lightweight sass-library to support css3 vendor prefixes. We'll be using Bourbon to clean-up our code and make it more readable.
+We'll be using Bourbon, *a lightweight SASS pattern-library*, to support CSS3 vendor prefixes. This will clean-up our code a bit and make it more readable/maintainable.
 
-#### Example
+An important note is that including bourbon doesn't write any code. It is merely a library of mixins that we can use if we so choose. *(aka not bootstrappy).*
+
+[![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/bourbon-not-bootstrappopotamus.png)](https://twitter.com/matthewcopeland/status/282078621663887360)
+
+
+#### Example use of bourbon
 
 ```scss
+// scss
+
 .foo {
   @include border-radius( 5px );
 }
@@ -50,7 +53,9 @@ A lightweight sass-library to support css3 vendor prefixes. We'll be using Bourb
 
 Outputs:
 
-```scss
+```css
+/* css */
+
 .foo {
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
@@ -228,7 +233,7 @@ Define the `$sun-size`.
 The `$sun-size` will come in handy when we need to align elements with our sun and/or base other elements on the `$sun-size`. We'll use this variable for `height`, `width`.
 
 
-### Make a utility for a Circle
+### Make a reusable `@mixin` for a circle
 To create a circle, we'll need an object that is of equal height and width and has a 50% border-radius.
 
 ```scss
@@ -239,8 +244,7 @@ To create a circle, we'll need an object that is of equal height and width and h
 }
 ```
 
-### Center the sun.
-To center the element, I've made a `@mixin`.
+### Create a mixin to center the sun in the window
 
 
 ### Animate the sun
@@ -348,7 +352,6 @@ Now that our animations are all lined up. It's time to have some fun. Change var
 
 ## References
 
-### CSS stuff
 * Paul Irish on the benefits of animating with translate. http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft
 * Lea Verou's animation's with one keyframe. http://lea.verou.me/2012/12/animations-with-one-keyframe
 * David DeSandro on 3D transforms http://24ways.org/2010/intro-to-css-3d-transforms
@@ -358,5 +361,3 @@ Now that our animations are all lined up. It's time to have some fun. Change var
 * [Sass functions](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html)
 * Bourbon http://bourbon.io
 
-## Feedback
-* A page on what sass and bourbon do.
