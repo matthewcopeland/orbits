@@ -1,7 +1,7 @@
 Talk for Awayday
 ===================
 
-Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday.
+Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday. [#2013naad](https://twitter.com/search?q=%232013naad&src=hash)
 
 ## Our goal
 
@@ -9,67 +9,102 @@ Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday.
 ### Video: http://youtu.be/CI5oZjKps-w
 
 
-## Tools
+## What we'll be learing about
+* Some Sass features
+* CSS Keyframe animations
 
-### Sass
+
+
+### Sass features
 Our goal *(a highly flexible, modular and maintainable animation)* would extremely tedious with static css. To give us what we want, we'll be utilizing [Sass](http://sass-lang.com).
-Some of the key features of sass that we'll be using:
 
-* [$variables]() to drive our layouts and simplify tweaks/refactoring.
-* [@mixin]()s
-* [@function]()
-* [@for]()
-* [darken hsl function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
-* [rgba() function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#rgba-instance_method)
+Some of the key features of sass that we'll be using today:
+
+* [@for](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id11) loops.
+* [@mixin](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins)s
+* [$variables](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_) to drive our layouts and simplify tweaks/refactoring.
+* [@function](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#function_directives)
+* [rgba() sass function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#rgba-instance_method)
+* [darken() sass function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
 
 ### Bourbon
-A lightweight sass-library to support vendor prefixing.
+A lightweight sass-library to support css3 vendor prefixes. This allows your code to be much cleaner and more readable.
 
-## CSS Keyframe animations
-### Keyframes
-keyframes or steps to animate between.
+#### Example
+
 ```scss
-//example
-@-keyframes foo {
-  0% {  }
+.foo {
+  @include border-radius( 5px );
 }
+```
 
-### Animation
-Apply a set of keyframes to an element.
 
-```scss
-//example implementing the foo keyframes from above
-.bar {
-  animation-name: foo; //
+Outputs:
 
-  animation-duration: 3s; // duration for the animation to last.
-  animation-delay: 1s; // amount of time to wait before starting the animation. defaults to 0.
-
-  animation-iteration-count: infinite; // number of times to repeat the animation. can also be a number. defaults to 1.
-  animation-direction: alternate; // direction to play the keyframes.  forward, backward, alternate.
-
+```css
+.foo {
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
 ```
 
 
 
-## Space
 
-### The 'darken' function
-The night sky utilzes sass' darken function. The darken (or lighten) function allows you to move through the HSL color-space. This can be quite useful when you want to stay consistent within your color-palette and need to create some contrast.  You'll see this become more useful in the Earth.
+### CSS Keyframe animations
+
+#### Keyframes
+
+This does not envoke an animation, but simply defines the keyframes/steps to animate between.
+
+```scss
+//example
+@-keyframes foo {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+```
+
+#### Animation
+Apply a set of keyframes to an element and tell it how long the animation will last.
+
+```scss
+//example implementing the foo keyframes from above
+
+.bar {
+  animation-name: foo;
+  animation-duration: 3s;
+}
+
+
+// or shorthand
+
+.bar {
+  animation: foo 3s;
+}
+```
+
+
+
+## Milky-way
+
+### Variables and the `darken()` function
+The milky-way utilzes a variable from our color palette and `darken()` function. The `darken` and `lighten` functions allow you to move through the HSL color-space. This can be quite useful when you want to stay consistent within your color-palette and need to create some contrast.  You'll see this become more useful in the Earth.
+
 
 
 ## The Sun
 
-To create a ball, we'll need an object that is of equal height and width and has a 50% border-radius.
+### Variable-driven size and position
 
+Define the `$sun-size`.
 
-### Size and position driven via variables
-The `$planet-size` will come in handy when we need to align things with our planet. We'll use this variable for `height` and `width` and also to calculate a 50% border-radius. To center the element horizontally, I've made a small utility that accepts a `$size` and then sets the left and margin-left properties. This is another use of $planet-size. Now it's nice and easy to change the size of the planet.
+The `$sun-size` will come in handy when we need to align elements with our sun and/or base other elements on the `$sun-size`. We'll use this variable for `height`, `width`.
 
 
 ### Make a utility for a Circle
-In this utility, we'll need to include a few things: `height`, `width`.
+To create a circle, we'll need an object that is of equal height and width and has a 50% border-radius.
 
 ```scss
 @mixin circle($size) {
@@ -79,26 +114,47 @@ In this utility, we'll need to include a few things: `height`, `width`.
 }
 ```
 
+### Center the sun.
+To center the element, I've made a `@mixin`.
+
 
 ### Animate the sun
-* Setup a mixin for the sun animation.
-*
+* Setup the pulse keyframes and apply them to the sun.
+* Setup the zoom-in/out keyframes and apply them to the milky-way.
 
 
 ## Orbits & Planets
-Before we can make a planet, we need to make an orbit.
+
+### Orbit
+Before we can make a planet, we need to make an orbit. Then we'll put the planet inside the orbit. This will let us animate the orbit and the planet will naturally stay
 
 * Base the `$orbit-size` on `$sun-size`.
-* Center the orbits.
-* Add the planet.
-* Give the planet a default position.
+* Reuse the circle `@mixin`.
+* Reuse the center `@mixin`.
+* Fix the orbit to be centered in the window.
 
+### Planet
+
+* Base the `$planet-size` on `$sun-size`.
+* Reuse the circle `@mixin`.
+* Position the planet absolutely inside its orbit.
+* Center the planet vertically using the verticle-middle `@mixin`.
+* Place the planet directly over the orbit's border on the right side.
+
+
+### Create multiple orbits/planets
+
+* Use ruby to quickly create multiple obits/planets.
+* Use a `@for` loop to enlarge the size of each orbit and position it.
+* Create the sizing-loop to make the process easier.
 
 
 ### The orbit/planet animation.
+
 The orbit is what we'll be rotating around the sun. By rotating the orbit, the planet will move with it.
+
 * Count the number of orbits/planets.
-* Create the sizing-loop to make the process easier.
+
 
 
 

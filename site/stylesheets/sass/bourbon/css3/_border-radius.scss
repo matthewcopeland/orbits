@@ -23,5 +23,4 @@
 
 @mixin border-radius($radii) {
   @include prefixer(border-radius, $radii, spec);
-  @include prefixer(border-radius, $radii, spec);
 }

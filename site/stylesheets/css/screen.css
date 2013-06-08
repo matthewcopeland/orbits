@@ -203,15 +203,17 @@ body {
 
 #sun {
   position: fixed;
-  display: block;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  border-radius: 50%;
-  left: 50%;
-  margin-left: -150px;
-  top: 50%;
-  margin-top: -150px;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #f59f1a), color-stop(100%, rgba(245, 159, 26, 0)));
   background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #f59f1a, rgba(245, 159, 26, 0));
   background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0));
@@ -220,8 +222,15 @@ body {
   animation: pulse 1.8s 4s alternate infinite linear; }
 
 .orbit {
-  display: block;
   position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   opacity: 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-transform: rotate3d(0.5, 0, 0, 90deg);
@@ -245,11 +254,6 @@ body {
     height: 360px;
     width: 360px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -180px;
-    top: 50%;
-    margin-top: -180px;
     -webkit-animation-duration: 3.6s;
     -moz-animation-duration: 3.6s;
     animation-duration: 3.6s; }
@@ -257,11 +261,6 @@ body {
     height: 420px;
     width: 420px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -210px;
-    top: 50%;
-    margin-top: -210px;
     -webkit-animation-duration: 4.2s;
     -moz-animation-duration: 4.2s;
     animation-duration: 4.2s; }
@@ -269,11 +268,6 @@ body {
     height: 480px;
     width: 480px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -240px;
-    top: 50%;
-    margin-top: -240px;
     -webkit-animation-duration: 4.8s;
     -moz-animation-duration: 4.8s;
     animation-duration: 4.8s; }
@@ -281,11 +275,6 @@ body {
     height: 540px;
     width: 540px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -270px;
-    top: 50%;
-    margin-top: -270px;
     -webkit-animation-duration: 5.4s;
     -moz-animation-duration: 5.4s;
     animation-duration: 5.4s; }
@@ -293,11 +282,6 @@ body {
     height: 600px;
     width: 600px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -300px;
-    top: 50%;
-    margin-top: -300px;
     -webkit-animation-duration: 6s;
     -moz-animation-duration: 6s;
     animation-duration: 6s; }
@@ -305,11 +289,6 @@ body {
     height: 660px;
     width: 660px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -330px;
-    top: 50%;
-    margin-top: -330px;
     -webkit-animation-duration: 6.6s;
     -moz-animation-duration: 6.6s;
     animation-duration: 6.6s; }
@@ -317,11 +296,6 @@ body {
     height: 720.0px;
     width: 720.0px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -360.0px;
-    top: 50%;
-    margin-top: -360.0px;
     -webkit-animation-duration: 7.2s;
     -moz-animation-duration: 7.2s;
     animation-duration: 7.2s; }
@@ -329,11 +303,6 @@ body {
     height: 780px;
     width: 780px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -390px;
-    top: 50%;
-    margin-top: -390px;
     -webkit-animation-duration: 7.8s;
     -moz-animation-duration: 7.8s;
     animation-duration: 7.8s; }
@@ -341,38 +310,20 @@ body {
     height: 840px;
     width: 840px;
     border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -420px;
-    top: 50%;
-    margin-top: -420px;
     -webkit-animation-duration: 8.4s;
     -moz-animation-duration: 8.4s;
     animation-duration: 8.4s; }
-  .orbit:nth-of-type(10) {
-    height: 900px;
-    width: 900px;
-    border-radius: 50%;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -450px;
-    top: 50%;
-    margin-top: -450px;
-    -webkit-animation-duration: 9s;
-    -moz-animation-duration: 9s;
-    animation-duration: 9s; }
 
 .planet {
-  display: block;
   position: absolute;
   right: -15px;
-  top: 50%;
-  margin-top: -15px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border-radius: 50%;
-  box-shadow: inset -3px -3px 3px 0 rgba(0, 0, 0, 0.6);
   background: #006fab; }
 
 @-webkit-keyframes subtitles {
@@ -462,8 +413,10 @@ body {
       text-align: right; }
     #subtitles p:last-of-type {
       position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       top: 30%;
       width: 12em;
-      text-align: center;
-      left: 50%;
-      margin-left: -6em; }
+      text-align: center; }

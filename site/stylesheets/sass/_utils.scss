@@ -1,18 +1,26 @@
-@mixin vertical-middle($size) {
-  top: 50%;
-  margin-top: -$size/2;
-}
-
-@mixin horizontal-center($size) {
-  left: 50%;
-  margin-left: -$size/2;
+@mixin vertical-middle {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
-@mixin center($size) {
-  @include horizontal-center($size);
-  @include vertical-middle($size);
+
+@mixin horizontal-center {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+
+@mixin center {
+  @include horizontal-center;
+  @include vertical-middle;
+}
+
 
 
 @mixin fill($position:fixed) {
@@ -31,9 +39,3 @@
   @include border-radius( 50% );
 }
 
-
-
-@mixin sphere($size) {
-  @include circle($size);
-  box-shadow: inset (-$size/10) (-$size/10) $size/10 0 rgba(0,0,0, 0.6);
-}

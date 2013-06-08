@@ -1,40 +1,8 @@
-$orbit-size: $sun-size;
-
-.orbit {
-  display: block;
-  position: fixed;
-  opacity: 0;
-  border: 1px solid rgba(255,255,255, .2);
-  @include transform( rotate3d(0.5,0,0, 90deg) );
-  @include animation-name(orbit);
-  @include animation-delay( $orbit-animation-delay );
-  @include animation-iteration-count( infinite );
-  @include animation-timing-function( linear );
-
-  @function nth-orbit($base, $i) {
-    @return $base * (1 + .2*$i);
-  }
-
-
-  @for $i from 1 through 10 {
-    &:nth-of-type( #{$i} ) {
-      @include circle( nth-orbit($orbit-size, $i) );
-      @include center( nth-orbit($orbit-size, $i) );
-      @include animation-duration( nth-orbit($orbit-animation-duration, $i) );
-    }
-  }
-}
-
-
-
 .planet {
-  display: block;
   position: absolute;
   right: -$planet-size/2;
-  @include vertical-middle($planet-size);
-  @include sphere($planet-size);
+  @include vertical-middle;
+  @include circle($planet-size);
   background: $darkblue;
 }
-
-
 

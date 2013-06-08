@@ -41,12 +41,11 @@ $msg-time: ($total-animation-time + $msg-lead-time)/($msg-count);
     @include subtitles;
 
     &:last-of-type {
-      $title-width: 12em;
       position: fixed;
+      @include horizontal-center;
       top: 30%;
-      width: $title-width;
+      width: 12em;
       text-align: center;
-      @include horizontal-center( $title-width );
     }
   }
 }

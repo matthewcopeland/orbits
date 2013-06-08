@@ -1,9 +1,10 @@
-// sun
+// sizes
 $sun-size: 300px;
+$orbit-size: $sun-size;
+$planet-size: $sun-size/10;
 
 
-
-$planet-size: 30px;
+$orbit-count: 9;
 
 
 // animation variables

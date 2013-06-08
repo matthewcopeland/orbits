@@ -4,10 +4,9 @@ $sun-color: $lightorange;
 
 #sun {
   position: fixed;
-  display: block;
+  @include center;
   @include circle($sun-size);
-  @include center($sun-size);
   @include radial-gradient(50% 50%, circle closest-side, $sun-color, rgba($sun-color, 0.0) );
-  @include animation(pulse $sunglow-animation-duration $sunglow-animation-delay alternate infinite linear);
+  @include animation( pulse $sunglow-animation-duration $sunglow-animation-delay alternate infinite linear );
 }
 
