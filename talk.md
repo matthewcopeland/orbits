@@ -397,6 +397,8 @@ $pulse-animation-duration: 1.8s;
 ```
 
 
+
+
 ## Orbits & Planets
 
 ### Orbit
@@ -405,7 +407,21 @@ Before we can make a planet, we need to make an orbit. Then we'll put the planet
 * Base the `$orbit-size` on `$sun-size`.
 * Reuse the circle `@mixin`.
 * Reuse the center `@mixin`.
-* Fix the orbit to be centered in the window.
+
+```scss
+$orbit-size: $sun-size*1.2;
+
+.orbit {
+  position: fixed;
+  @include center;
+  border: 1px solid rgba(255,255,255, .2);
+  @include circle($orbit-size);
+}
+```
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/08-orbit.png)
+
+
 
 ### Planet
 
@@ -414,6 +430,9 @@ Before we can make a planet, we need to make an orbit. Then we'll put the planet
 * Position the planet absolutely inside its orbit.
 * Center the planet vertically using the verticle-middle `@mixin`.
 * Place the planet directly over the orbit's border on the right side.
+
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/09-planet.png)
 
 
 ### Create multiple orbits/planets
