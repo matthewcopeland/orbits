@@ -5,7 +5,9 @@ A stylesheet talk at 2013 ThoughtWorks North America Awayday. [#2013naad](https:
 
 
 ## Purpose
-Look at how to use some of the powerful features of [SASS](http://sass-lang.com) to choreograph modular, maintainable and highly-flexible css keyframe animations. *Note: Using static CSS to choreograph css-animations is extremely tedious and bad for your health.*
+Look at how to use some of the powerful features of [SASS](http://sass-lang.com) to choreograph modular, maintainable and highly-flexible css keyframe animations.
+
+***Warning: Using static CSS to choreograph css-animations is extremely tedious and bad for your health.***
 
 
 
@@ -25,6 +27,10 @@ Look at how to use some of the powerful features of [SASS](http://sass-lang.com)
 
 
 
+***
+
+
+
 ### SASS features
 * [$variables](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_) to drive our layouts and simplify tweaks/refactoring.
 * [@mixins](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins)
@@ -32,6 +38,11 @@ Look at how to use some of the powerful features of [SASS](http://sass-lang.com)
 * [@function](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#function_directives)
 * [darken() function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
 * [Referencing Parent Selectors: &](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#referencing_parent_selectors_)
+
+
+
+***
+
 
 
 ### Bourbon
@@ -43,7 +54,6 @@ We'll be using Bourbon, *a lightweight SASS pattern-library*, to support CSS3 ve
 
 
 #### Example use of bourbon
-
 ```scss
 // scss
 
