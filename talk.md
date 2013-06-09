@@ -31,6 +31,7 @@ Look at how to use some of the powerful features of [SASS](http://sass-lang.com)
 * [@for](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id11) loops.
 * [@function](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#function_directives)
 * [darken() function](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#darken-instance_method)
+* [Referencing Parent Selectors: &](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#referencing_parent_selectors_)
 
 
 ### Bourbon
@@ -463,7 +464,82 @@ Use ruby/haml to quickly create multiple obits/planets.
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/10-multi-planet.png)
 
 
-* Animate the orbits.
+## Animate the orbits.
+In order to create a complete 360-degree rotation, we have to guide the rotation through 3-steps. Usually, you would have to write this out, but here we'll use a `@for` loop.
+
+* Define the value of your full `$rotation`.
+* Define the number of steps to complete your rotation (`$rotation-step-count`).
+* Calculate the value of a `$rotation-step`.
+
+
+```scss
+@include keyframes(orbit) {
+  $rotation: 360;
+  $rotation-step-count: 3;
+  $rotation-step: $rotation/$rotation-step-count;
+
+  @for $i from 1 through $rotation-step-count {
+    #{$i * (100%/$rotation-step-count)} { @include transform( rotate3d(0,0,1, #{$i*$rotation-step}deg) ); }
+  }
+}
+```
+
+```css
+/* css output of keyframes */
+
+@-keyframes orbit {
+  33.33333% { transform: rotate3d(0, 0, 1, 120deg); }
+
+  66.66667% { transform: rotate3d(0, 0, 1, 240deg); }
+
+  100%      { transform: rotate3d(0, 0, 1, 360deg); }
+}
+```
+
+I don't really like the fact that my percentages don't come out clean. This may cause some hiccups in easing-calculations. Fortunately we used a loop, so we can easily change the `$rotation-step-count` from `3` to `4`.
+
+```scss
+@include keyframes(orbit) {
+  $rotation: 360;
+  $rotation-step-count: 4;
+  $rotation-step: $rotation/$rotation-step-count;
+
+  @for $i from 1 through $rotation-step-count {
+    #{$i * (100%/$rotation-step-count)} { @include transform( rotate3d(0,0,1, #{$i*$rotation-step}deg) ); }
+  }
+}
+```
+
+```css
+/* css output from 4-step rotation */
+@keyframes orbit {
+  25%   { transform: rotate3d(0, 0, 1, 90deg); }
+
+  50%   { transform: rotate3d(0, 0, 1, 180deg); }
+
+  75%   { transform: rotate3d(0, 0, 1, 270deg); }
+
+  100%  { transform: rotate3d(0, 0, 1, 360deg); }
+}
+```
+
+*Much cleaner.*
+
+Now let's apply these keyframes to our orbit.
+
+```scss
+$orbit-animation-delay: $pulse-animation-delay + $pulse-animation-duration*2;
+$orbit-animation-duration: 3s;
+
+.orbit {
+  @include animation( orbit $orbit-animation-duration $orbit-animation-delay infinite linear );
+}
+```
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/11-orbiting.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/12-orbiting.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/13-orbiting.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/14-orbiting.png)
 
 
 ## Animation timing
@@ -471,6 +547,15 @@ Use ruby/haml to quickly create multiple obits/planets.
 * Hook the animations together in the variables file.
 * Use the sum total of previous animation to determine when to execute the next animation.
 
+
+
+
+
+
+
+
+
+***
 
 ## Subtitles
 * Position the subtitles on the page.
