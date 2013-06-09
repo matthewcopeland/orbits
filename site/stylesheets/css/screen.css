@@ -160,7 +160,10 @@ body {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-  transform: scale(1); }
+  transform: scale(1);
+  -webkit-animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear;
+  -moz-animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear;
+  animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear; }
 
 #sun {
   position: fixed;

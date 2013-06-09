@@ -7,9 +7,9 @@ body {
 #milkyway {
   @include fill;
   @include transform( scale(1) );
-  // @include animation(
-  //   zoomin $zoomin-animation-duration $zoomin-animation-delay linear,
-  //   zoomout $zoomout-animation-duration $zoomout-animation-delay linear
-  // );
+  @include animation(
+    zoomin $zoomin-animation-duration $zoomin-animation-delay linear,
+    zoomout $zoomout-animation-duration $zoomout-animation-delay linear
+  );
 }
 
