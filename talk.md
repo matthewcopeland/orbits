@@ -37,9 +37,10 @@ Look at how to use some of the powerful features of [SASS](http://sass-lang.com)
 ### Bourbon
 We'll be using Bourbon, *a lightweight SASS pattern-library*, to support CSS3 vendor prefixes. This will clean-up our code a bit and make it more readable/maintainable.
 
+***An important note:*** Including bourbon doesn't write any code. It is merely a library of mixins that we can use if we so choose. ***aka not [bootstrappopotamus](https://twitter.com/matthewcopeland/status/282078621663887360).***
+
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/bourbon-not-bootstrappopotamus.png)
 
-An important note is that including bourbon doesn't write any code. It is merely a library of mixins that we can use if we so choose. * aka not [bootstrappopotamus](https://twitter.com/matthewcopeland/status/282078621663887360). *
 
 #### Example use of bourbon
 
