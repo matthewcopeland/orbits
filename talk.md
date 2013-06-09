@@ -330,14 +330,7 @@ $sun-size: 300px;
 
 
 
-
-## Animate the zoom-in and sun-pulse
-* Setup the zoom-in keyframes and apply them to the milky-way.
-* Setup the pulse keyframes and apply them to the sun.
-
-***
-
-### Zoom-in animation
+## Zoom-in animation
 ```scss
 @include keyframes(zoomin) {
   from { @include transform( scale(0) ); }
@@ -351,7 +344,7 @@ $zoomin-animation-duration: 4s;
 
 #milkyway {
   @include fill;
-  @include transform( scale(1) );
+  @include transform( scale(1) ); // sets inital scale and helps avoid flickering.
   @include animation( zoomin $zoomin-animation-duration $zoomin-animation-delay linear );
 }
 ```
@@ -361,6 +354,47 @@ $zoomin-animation-duration: 4s;
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/06-zoom-in-75.png)
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/07-zoom-in-end.png)
 
+
+
+## Sun pulse animation
+
+```scss
+@include keyframes(pulse) {
+  to { @include transform( scale(0.9) ); }
+}
+```
+
+```scss
+$pulse-animation-duration: 1.8s;
+
+#sun {
+  @include animation( pulse $pulse-animation-duration );
+}
+```
+
+
+We want the sun to pulse, but we know that our use won't be able to see the animation until after the `#milkyway` is finished zooming in. So, we'll apply an `animation-delay` and make it equal to the `$zoomin-animation-duration`.
+
+
+```scss
+$pulse-animation-duration: 1.8s;
+$pulse-animation-delay: $zoomin-animation-duration;
+
+#sun {
+  @include animation( pulse $pulse-animation-duration $pulse-animation-delay );
+}
+```
+
+Once the pulse-animation begins, we want the animation to continue infinitely and to alternate the direction of the pulse.
+
+```scss
+$pulse-animation-delay: $zoomin-animation-duration;
+$pulse-animation-duration: 1.8s;
+
+#sun {
+  @include animation( pulse $pulse-animation-duration $pulse-animation-delay alternate infinite linear );
+}
+```
 
 
 ## Orbits & Planets
