@@ -20,6 +20,7 @@ Look at how to use some of the powerful features of [SASS](http://sass-lang.com)
 * Bourbon - a SASS pattern library.
 * CSS transforms (scale and rotate).
 * CSS keyframe animations.
+* CSS :nth-of-type.
 * How to use the above to create the demo.
 
 
@@ -97,13 +98,14 @@ You can rotate an element around its X, Y and Z axes. There are a few ways to ro
 
 
 ```scss
-.foo { transform: rotate( 180deg ); } // default rotates X
+.foo { transform: rotate( 180deg ); } // default rotates z
+
+.foo { transform: rotateZ( 180deg ); } // rotates Z
 
 .foo { transform: rotateX( 180deg ); } // rotates X
 
 .foo { transform: rotateY( 180deg ); } // rotates Y
 
-.foo { transform: rotateZ( 180deg ); } // rotates Z
 ```
 
 
@@ -224,7 +226,7 @@ body {
 
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/01-darken.png)
 
-### Create a `#milky-way` container
+### Create a `#milkyway` container
 We'll create a reusable `@mixin` to 'fill' the screen with the `#milkyway`. This will helpful later as we'll want to perform a zoom animation on everything inside the `#milkyway` later.
 
 
@@ -437,11 +439,31 @@ $orbit-size: $sun-size*1.2;
 
 ### Create multiple orbits/planets
 
-* Use ruby to quickly create multiple obits/planets.
-* Use a `@for` loop to enlarge the size of each orbit and position it.
-* Create the sizing-loop to make the process easier.
-* Animate the orbits.
+Use ruby/haml to quickly create multiple obits/planets.
 
+```haml
+#orbits
+  - 9.times do
+    .orbit
+      .planet
+```
+
+* Use a `@for` loop to enlarge the size of each orbit.
+
+```scss
+.orbit {
+  @for $i from 1 through $orbit-count {
+    &:nth-of-type( #{$i} ) {
+      @include circle( $orbit-size * (1 + .2*$i) ) );
+    }
+  }
+}
+```
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/10-multi-planet.png)
+
+
+* Animate the orbits.
 
 
 ## Animation timing
