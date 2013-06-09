@@ -5,7 +5,7 @@ A stylesheet talk at 2013 ThoughtWorks North America Awayday. [#2013naad](https:
 
 
 ## Purpose
-Look at how to use some of the powerful features of [SASS](http://sass-lang.com) to choreograph modular, maintainable and highly-flexible css keyframe animations. *A task that would extremely tedious with static css.*
+Look at how to use some of the powerful features of [SASS](http://sass-lang.com) to choreograph modular, maintainable and highly-flexible css keyframe animations. *Note: Using static CSS to choreograph css-animations is extremely tedious and bad for your health.*
 
 
 
@@ -204,16 +204,49 @@ Apply a set of keyframes to an element and tell it how long the animation will l
 }
 ```
 
+***
 
 
-## Time to start building
+## Time to start building the milky way
 
 
-### Variable-driven colors and the `darken` function
+### Set `background-color` using a variable and `darken()` function.
 
 Set the body's `background-color` using a variable from our color palette and `darken()` function.
 
 The `darken` and `lighten` functions allow you to move through the HSL color-space. This can be quite useful when need to create some contrast and already have a color-palette.
+
+```scss
+body {
+  background: darken($blackblue, 10);
+}
+```
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/01-darken.png)
+
+### Create a `#milky-way` container
+We'll create a reusable `@mixin` to 'fill' the screen with the `#milkyway`. This will helpful later as we'll want to perform a zoom animation on everything inside the `#milkyway` later.
+
+
+```scss
+@mixin fill($position:fixed) {
+  position: $position;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+```
+
+```scss
+#milkyway {
+  @include fill;
+}
+```
+
+*Note that this didn't change the appearance of the screen.*
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/01-darken.png)
 
 
 
@@ -229,6 +262,7 @@ The `$sun-size` will come in handy when we need to align elements with our sun a
 ### Make a reusable `@mixin` for a circle
 To create a circle, we'll need an object that is of equal height and width and has a 50% border-radius.
 
+
 ```scss
 @mixin circle($size) {
   height: $size;
@@ -237,12 +271,96 @@ To create a circle, we'll need an object that is of equal height and width and h
 }
 ```
 
-### Create a mixin to center the sun in the window
+```scss
+$sun-color: $lightorange;
+$sun-size: 300px;
+
+#sun {
+  @include circle($sun-size);
+  @include radial-gradient(50% 50%, circle closest-side, $sun-color, rgba($sun-color, 0.0) );
+}
+```
 
 
-### Animate the sun
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/02-sun.png)
+
+
+### Center the sun
+
+We also need to create a mixin to center the sun in the window. Since we have defined the size of the sun, we can set its `position`, `top`, `left`, `bottom` and `right` and `margin` properties.
+
+We'll make 3 `@mixins` for this so that we can reuse pieces of it *(that'll come in later)*.
+
+```scss
+@mixin vertical-middle {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@mixin horizontal-center {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center {
+  @include horizontal-center;
+  @include vertical-middle;
+}
+```
+
+
+```scss
+$sun-color: $lightorange;
+$sun-size: 300px;
+
+#sun {
+  position: fixed;
+  @include center;
+  @include circle($sun-size);
+  @include radial-gradient(50% 50%, circle closest-side, $sun-color, rgba($sun-color, 0.0) );
+}
+```
+
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/03-sun-center.png)
+
+
+
+
+## Animate the zoom-in and sun-pulse
+* Setup the zoom-in keyframes and apply them to the milky-way.
 * Setup the pulse keyframes and apply them to the sun.
-* Setup the zoom-in/out keyframes and apply them to the milky-way.
+
+***
+
+### Zoom-in animation
+```scss
+@include keyframes(zoomin) {
+  from { @include transform( scale(0) ); }
+  to { @include transform( scale(1) ); }
+}
+```
+
+```scss
+$zoomin-animation-delay: 0;
+$zoomin-animation-duration: 4s;
+
+#milkyway {
+  @include fill;
+  @include transform( scale(1) );
+  @include animation( zoomin $zoomin-animation-duration $zoomin-animation-delay linear );
+}
+```
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/04-zoom-in-start.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/05-zoom-in-mid.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/06-zoom-in-75.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/07-zoom-in-end.png)
+
 
 
 ## Orbits & Planets
