@@ -37,10 +37,9 @@ Look at how to use some of the powerful features of [SASS](http://sass-lang.com)
 ### Bourbon
 We'll be using Bourbon, *a lightweight SASS pattern-library*, to support CSS3 vendor prefixes. This will clean-up our code a bit and make it more readable/maintainable.
 
-An important note is that including bourbon doesn't write any code. It is merely a library of mixins that we can use if we so choose. *(aka not bootstrappy).*
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/bourbon-not-bootstrappopotamus.png)
 
-[![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/bourbon-not-bootstrappopotamus.png)](https://twitter.com/matthewcopeland/status/282078621663887360)
-
+An important note is that including bourbon doesn't write any code. It is merely a library of mixins that we can use if we so choose. * aka not [bootstrappopotamus](https://twitter.com/matthewcopeland/status/282078621663887360). *
 
 #### Example use of bourbon
 
@@ -131,8 +130,6 @@ The axes' rotations are product of the degree-value and the axis-value.
 The following will all rotate 180 degrees around around the X-axis.
 
 ```scss
-.foo { transform: rotate( 180deg ); }
-
 .foo { transform: rotateX( 180deg ); }
 
 .foo { transform: rotate3d( 1, 0, 0, 180deg ); }
@@ -165,6 +162,8 @@ The following will all rotate 180 degrees around around the Y-axis.
 The following will all rotate 180 degrees around around the Z-axis.
 
 ```scss
+.foo { transform: rotate( 180deg ); }
+
 .foo { transform: rotateZ( 180deg ); }
 
 .foo { transform: rotate3d( 0, 0, 1, 180deg ); }
