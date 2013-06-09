@@ -210,10 +210,14 @@ Apply a set of keyframes to an element and tell it how long the animation will l
 ***
 
 
-## Time to start building the milky way
+
+# Time to start building
 
 
-### Set `background-color` using a variable and `darken()` function.
+***
+
+
+### Setup the `#milkyway` and `body` `background-color`
 
 Set the body's `background-color` using a variable from our color palette and `darken()` function.
 
