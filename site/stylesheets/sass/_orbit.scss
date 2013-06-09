@@ -7,8 +7,6 @@
   @include transform( rotate3d(.5,0,0, 90deg) );
   @include animation( orbit $orbit-animation-duration $orbit-animation-delay infinite linear );
 
-  @include animation-delay(0);
-
 
   @function nth-orbit($base, $i) {
     @return $base * (1 + .2*$i);

@@ -201,10 +201,7 @@ body {
   transform: rotate3d(0.5, 0, 0, 90deg);
   -webkit-animation: orbit 3s 7.6s infinite linear;
   -moz-animation: orbit 3s 7.6s infinite linear;
-  animation: orbit 3s 7.6s infinite linear;
-  -webkit-animation-delay: 0;
-  -moz-animation-delay: 0;
-  animation-delay: 0; }
+  animation: orbit 3s 7.6s infinite linear; }
   .orbit:nth-of-type(1) {
     height: 432px;
     width: 432px;
