@@ -224,9 +224,6 @@ Apply a set of keyframes to an element and tell it how long the animation will l
 # Time to start building
 
 
-***
-
-
 ### Setup the `#milkyway` and `body` `background-color`
 
 Set the body's `background-color` using a variable from our color palette and `darken()` function.
@@ -680,4 +677,4 @@ Now that our animations are all lined up. It's time to have some fun. Change var
 ### Sass stuffs
 * [Sass functions](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html)
 * Bourbon http://bourbon.io
-
+* [Constraints and Rotations - What you should know](http://aligorith.blogspot.com/2010/09/rigging-faq-constraints-and-rotations.html)
