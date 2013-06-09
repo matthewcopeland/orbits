@@ -1,19 +1,19 @@
-// vender
+// base
 @import "bourbon/bourbon";
-
-// variables
 @import "_utils.scss";
 @import "_color_palette.scss";
 @import "_variables.scss";
+@import "_reset.scss";
+
+
+// keyframe animation definitions
 @import "_orbit_keyframes.scss";
 
 
-//-------------------------
-// above doesn't print css
-//-------------------------
-
-@import "_reset.scss";
+// elements
 @import "_milkyway.scss";
+
+
 @import "_sun.scss";
 @import "_orbit.scss";
 @import "_planet.scss";

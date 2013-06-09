@@ -1,3 +1,16 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
 @-webkit-keyframes pulse {
   to {
     -webkit-transform: scale(0.9); } }
@@ -71,117 +84,68 @@
     transform: scale(0); } }
 
 @-webkit-keyframes orbit {
-  50% {
-    opacity: .8; }
-
   25% {
     -webkit-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: .8; }
-
-  50% {
     -webkit-transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
 
   75% {
     -webkit-transform: rotate3d(0, 0, 1, 270deg); }
 
-  50% {
-    opacity: .8; }
-
   100% {
-    -webkit-transform: rotate3d(0, 0, 1, 360deg); } }
+    -webkit-transform: rotate3d(0, 0, 1, 360deg); }
+
+  50% {
+    opacity: .8; } }
 
 @-moz-keyframes orbit {
-  50% {
-    opacity: .8; }
-
   25% {
     -moz-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: .8; }
-
-  50% {
     -moz-transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
 
   75% {
     -moz-transform: rotate3d(0, 0, 1, 270deg); }
 
-  50% {
-    opacity: .8; }
-
   100% {
-    -moz-transform: rotate3d(0, 0, 1, 360deg); } }
+    -moz-transform: rotate3d(0, 0, 1, 360deg); }
+
+  50% {
+    opacity: .8; } }
 
 @-o-keyframes orbit {
-  50% {
-    opacity: .8; }
-
   25% {
     -o-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: .8; }
-
-  50% {
     -o-transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
 
   75% {
     -o-transform: rotate3d(0, 0, 1, 270deg); }
 
-  50% {
-    opacity: .8; }
-
   100% {
-    -o-transform: rotate3d(0, 0, 1, 360deg); } }
+    -o-transform: rotate3d(0, 0, 1, 360deg); }
+
+  50% {
+    opacity: .8; } }
 
 @keyframes orbit {
-  50% {
-    opacity: .8; }
-
   25% {
     transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
-    opacity: .8; }
-
-  50% {
     transform: rotate3d(0, 0, 1, 180deg); }
-
-  50% {
-    opacity: .8; }
 
   75% {
     transform: rotate3d(0, 0, 1, 270deg); }
 
-  50% {
-    opacity: .8; }
-
   100% {
-    transform: rotate3d(0, 0, 1, 360deg); } }
+    transform: rotate3d(0, 0, 1, 360deg); }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-weight: normal; }
-
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden; }
+  50% {
+    opacity: .8; } }
 
 body {
   background: #070d10; }
@@ -196,10 +160,7 @@ body {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear;
-  -moz-animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear;
-  animation: zoomin 4s 0 linear, zoomout 10s 19.6s linear; }
+  transform: scale(1); }
 
 #sun {
   position: fixed;
@@ -216,10 +177,7 @@ body {
   border-radius: 50%;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #f59f1a), color-stop(100%, rgba(245, 159, 26, 0)));
   background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #f59f1a, rgba(245, 159, 26, 0));
-  background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0));
-  -webkit-animation: pulse 1.8s 4s alternate infinite linear;
-  -moz-animation: pulse 1.8s 4s alternate infinite linear;
-  animation: pulse 1.8s 4s alternate infinite linear; }
+  background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0)); }
 
 .orbit {
   position: fixed;
@@ -233,82 +191,79 @@ body {
   margin-bottom: auto;
   opacity: 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 360px;
+  width: 360px;
+  border-radius: 50%;
   -webkit-transform: rotate3d(0.5, 0, 0, 90deg);
   -moz-transform: rotate3d(0.5, 0, 0, 90deg);
   -ms-transform: rotate3d(0.5, 0, 0, 90deg);
   -o-transform: rotate3d(0.5, 0, 0, 90deg);
   transform: rotate3d(0.5, 0, 0, 90deg);
-  -webkit-animation-name: orbit;
-  -moz-animation-name: orbit;
-  animation-name: orbit;
-  -webkit-animation-delay: 7.6s;
-  -moz-animation-delay: 7.6s;
-  animation-delay: 7.6s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  animation-timing-function: linear; }
+  -webkit-animation: orbit 3s 7.6s infinite linear;
+  -moz-animation: orbit 3s 7.6s infinite linear;
+  animation: orbit 3s 7.6s infinite linear;
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  animation-delay: 0; }
   .orbit:nth-of-type(1) {
-    height: 360px;
-    width: 360px;
+    height: 432px;
+    width: 432px;
     border-radius: 50%;
     -webkit-animation-duration: 3.6s;
     -moz-animation-duration: 3.6s;
     animation-duration: 3.6s; }
   .orbit:nth-of-type(2) {
-    height: 420px;
-    width: 420px;
+    height: 504.0px;
+    width: 504.0px;
     border-radius: 50%;
     -webkit-animation-duration: 4.2s;
     -moz-animation-duration: 4.2s;
     animation-duration: 4.2s; }
   .orbit:nth-of-type(3) {
-    height: 480px;
-    width: 480px;
+    height: 576px;
+    width: 576px;
     border-radius: 50%;
     -webkit-animation-duration: 4.8s;
     -moz-animation-duration: 4.8s;
     animation-duration: 4.8s; }
   .orbit:nth-of-type(4) {
-    height: 540px;
-    width: 540px;
+    height: 648px;
+    width: 648px;
     border-radius: 50%;
     -webkit-animation-duration: 5.4s;
     -moz-animation-duration: 5.4s;
     animation-duration: 5.4s; }
   .orbit:nth-of-type(5) {
-    height: 600px;
-    width: 600px;
+    height: 720px;
+    width: 720px;
     border-radius: 50%;
     -webkit-animation-duration: 6s;
     -moz-animation-duration: 6s;
     animation-duration: 6s; }
   .orbit:nth-of-type(6) {
-    height: 660px;
-    width: 660px;
+    height: 792.0px;
+    width: 792.0px;
     border-radius: 50%;
     -webkit-animation-duration: 6.6s;
     -moz-animation-duration: 6.6s;
     animation-duration: 6.6s; }
   .orbit:nth-of-type(7) {
-    height: 720.0px;
-    width: 720.0px;
+    height: 864.0px;
+    width: 864.0px;
     border-radius: 50%;
     -webkit-animation-duration: 7.2s;
     -moz-animation-duration: 7.2s;
     animation-duration: 7.2s; }
   .orbit:nth-of-type(8) {
-    height: 780px;
-    width: 780px;
+    height: 936px;
+    width: 936px;
     border-radius: 50%;
     -webkit-animation-duration: 7.8s;
     -moz-animation-duration: 7.8s;
     animation-duration: 7.8s; }
   .orbit:nth-of-type(9) {
-    height: 840px;
-    width: 840px;
+    height: 1008.0px;
+    width: 1008.0px;
     border-radius: 50%;
     -webkit-animation-duration: 8.4s;
     -moz-animation-duration: 8.4s;

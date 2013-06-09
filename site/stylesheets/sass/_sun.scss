@@ -7,6 +7,6 @@ $sun-color: $lightorange;
   @include center;
   @include circle($sun-size);
   @include radial-gradient(50% 50%, circle closest-side, $sun-color, rgba($sun-color, 0.0) );
-  @include animation( pulse $sunglow-animation-duration $sunglow-animation-delay alternate infinite linear );
+  // @include animation( pulse $pulse-animation-duration $pulse-animation-delay alternate infinite linear );
 }
 

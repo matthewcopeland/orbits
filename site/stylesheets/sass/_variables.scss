@@ -1,6 +1,6 @@
 // sizes
 $sun-size: 300px;
-$orbit-size: $sun-size;
+$orbit-size: $sun-size*1.2;
 $planet-size: $sun-size/10;
 
 
@@ -12,11 +12,11 @@ $zoomin-animation-delay: 0;
 $zoomin-animation-duration: 4s;
 
 
-$sunglow-animation-delay: $zoomin-animation-duration;
-$sunglow-animation-duration: 1.8s;
+$pulse-animation-delay: $zoomin-animation-duration;
+$pulse-animation-duration: 1.8s;
 
 
-$orbit-animation-delay: $sunglow-animation-delay + $sunglow-animation-duration*2;
+$orbit-animation-delay: $pulse-animation-delay + $pulse-animation-duration*2;
 $orbit-animation-duration: 3s;
 
 

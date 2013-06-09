@@ -14,15 +14,21 @@
 }
 
 
+
 @include keyframes(zoomout) {
   from { @include transform( scale(1) ); }
   to { @include transform( scale(0) ); }
 }
 
 
+
 @include keyframes(orbit) {
-  @for $i from 1 through 4 {
-    50% { opacity: .8; }
-    #{$i*25%} { @include transform( rotate3d(0,0,1, #{$i*90}deg) ); }
+  $rotation: 360;
+  $rotation-step-count: 4;
+  $rotation-step: $rotation/$rotation-step-count;
+
+  @for $i from 1 through $rotation-step-count {
+    #{$i * (100%/$rotation-step-count)} { @include transform( rotate3d(0,0,1, #{$i*$rotation-step}deg) ); }
   }
+  50% { opacity: .8; }
 }

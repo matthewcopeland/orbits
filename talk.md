@@ -465,6 +465,10 @@ Use ruby/haml to quickly create multiple obits/planets.
 
 
 ## Animate the orbits.
+
+### Define the keyframes
+
+#### Completing a 360 degree rotation
 In order to create a complete 360-degree rotation, we have to guide the rotation through 3-steps. Usually, you would have to write this out, but here we'll use a `@for` loop.
 
 * Define the value of your full `$rotation`.
@@ -507,6 +511,8 @@ I don't really like the fact that my percentages don't come out clean. This may 
   @for $i from 1 through $rotation-step-count {
     #{$i * (100%/$rotation-step-count)} { @include transform( rotate3d(0,0,1, #{$i*$rotation-step}deg) ); }
   }
+
+  50% { opacity: .8; }
 }
 ```
 
@@ -520,12 +526,20 @@ I don't really like the fact that my percentages don't come out clean. This may 
   75%   { transform: rotate3d(0, 0, 1, 270deg); }
 
   100%  { transform: rotate3d(0, 0, 1, 360deg); }
+
+  50% { opacity: .8; }
 }
 ```
 
-*Much cleaner.*
+*Ah. Much cleaner.*
 
-Now let's apply these keyframes to our orbit.
+
+
+
+### Apply `orbit` keyframes to `.orbit`
+
+We don't want the orbits to start until after the zoomin animation and a couple pulses of the sun.
+So we'll set `$orbit-animation-delay` to reflect that.
 
 ```scss
 $orbit-animation-delay: $pulse-animation-delay + $pulse-animation-duration*2;
@@ -542,16 +556,37 @@ $orbit-animation-duration: 3s;
 ![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/14-orbiting.png)
 
 
-## Animation timing
-* Setup variables for the animation's arguments.
-* Hook the animations together in the variables file.
-* Use the sum total of previous animation to determine when to execute the next animation.
 
 
+### Stagger the orbit animation
+The current animation works, but it doesn't do much for me. I want to vary the speeds of the orbits. So we'll add some logic to multiply the `animation-duration` in the `.orbit` `@for` loop.
 
 
+```scss
+.orbit {
+  @include animation( orbit $orbit-animation-duration $orbit-animation-delay infinite linear );
 
 
+  @function nth-orbit($base, $i) {
+    @return $base * (1 + .2*$i);
+  }
+
+
+  @for $i from 1 through $orbit-count {
+    &:nth-of-type( #{$i} ) {
+      @include circle( nth-orbit($orbit-size, $i) );
+      @include animation-duration( nth-orbit($orbit-animation-duration, $i) );
+    }
+  }
+}
+```
+
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/15-orbiting.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/16-orbiting.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/17-orbiting.png)
+![ScreenShot](https://raw.github.com/matthewcopeland/orbits/master/screenshots/18-orbiting.png)
+
+*Oh. That's better.*
 
 
 
