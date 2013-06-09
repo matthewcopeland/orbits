@@ -180,7 +180,10 @@ body {
   border-radius: 50%;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #f59f1a), color-stop(100%, rgba(245, 159, 26, 0)));
   background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #f59f1a, rgba(245, 159, 26, 0));
-  background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0)); }
+  background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0));
+  -webkit-animation: pulse 1.8s 4s alternate infinite linear;
+  -moz-animation: pulse 1.8s 4s alternate infinite linear;
+  animation: pulse 1.8s 4s alternate infinite linear; }
 
 .orbit {
   position: fixed;
