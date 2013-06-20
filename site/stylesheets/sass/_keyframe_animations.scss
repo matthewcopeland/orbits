@@ -24,11 +24,16 @@
 
 @include keyframes(orbit) {
   $rotation: 360;
-  $rotation-step-count: 4;
-  $rotation-step: $rotation/$rotation-step-count;
+  $rotation-keyframe-count: 4;
+  $rotation-keyframe-value: $rotation/$rotation-keyframe-count;
 
-  @for $i from 1 through $rotation-step-count {
-    #{$i * (100%/$rotation-step-count)} { @include transform( rotate3d(0,0,1, #{$i*$rotation-step}deg) ); }
+  @for $i from 1 through $rotation-keyframe-count {
+    #{$i * (100%/$rotation-keyframe-count)} { @include transform( rotate3d(0,0,1, #{$i*$rotation-keyframe-value}deg) ); }
   }
   50% { opacity: .8; }
+}
+
+
+@include keyframes(fadein) {
+  to { opacity: 1; }
 }

@@ -2,7 +2,7 @@
 $sun-size: 300px;
 $orbit-size: $sun-size*1.2;
 $planet-size: $sun-size/10;
-
+$gutter: 20px;
 
 $orbit-count: 9;
 
@@ -12,7 +12,7 @@ $zoomin-animation-delay: 0;
 $zoomin-animation-duration: 4s;
 
 
-$pulse-animation-delay: $zoomin-animation-duration;
+$pulse-animation-delay: $zoomin-animation-duration + $zoomin-animation-delay;
 $pulse-animation-duration: 1.8s;
 
 
@@ -24,10 +24,16 @@ $zoomout-animation-delay: $orbit-animation-delay + $orbit-animation-duration*4;
 $zoomout-animation-duration: 10s;
 
 
-
 // A little cheat to know the total animation time.
 
 $total-animation-time:
     $zoomout-animation-delay
   + $zoomout-animation-duration;
 
+
+
+// Subtitles
+$subtitle-count: 5;
+$subtitle-animation-duration: $total-animation-time/$subtitle-count;
+$subtitle-half-count: round($subtitle-count/2);
+$subtitle-last-width: 12em;

@@ -1,51 +1,45 @@
-$msg-count: 5;
-$msg-lead-time: 2s;
-$msg-time: ($total-animation-time + $msg-lead-time)/($msg-count);
-
-
-@include keyframes(subtitles) {
-  to { opacity: 1; }
-}
-
-
-@mixin subtitles {
-  @for $i from 1 through $msg-count {
-    &:nth-of-type(#{$i}) {
-      @include animation-name(subtitles);
-      @include animation-duration($msg-time);
-      @include animation-delay( $msg-time * ($i - 1) );
-    }
-  }
-
-  // cleanup with @if
-  &:nth-of-type(#{$msg-count}) { @include animation-duration($msg-time*2); }
-  &:nth-of-type(#{$msg-count - 1}),
-  &:nth-of-type(#{$msg-count - 2}), { text-align: right; }
-}
-
-
 #subtitles {
   display: table;
   width: 100%;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 $gutter;
+  @include subtitle-type;
+}
 
-  p {
-    display: table-cell;
-    vertical-align: middle;
-    color: white;
-    font-family: arial;
-    text-align: left;
-    font-size: 51px;
-    opacity: 0;
-    @include subtitles;
+.subtitle {
+  display: table-cell;
+  vertical-align: middle;
+  opacity: 0;
+  @include animation-name(fadein);
+  @include animation-duration($subtitle-animation-duration);
 
-    &:last-of-type {
-      position: fixed;
-      @include horizontal-center;
-      top: 30%;
-      width: 12em;
-      text-align: center;
+  @for $i from 1 through $subtitle-count {
+    &:nth-of-type(#{$i}) {
+      @include animation-delay( $subtitle-animation-duration * ($i - 1) );
     }
+  }
+
+
+  &:nth-of-type(n+#{$subtitle-half-count}) { text-align: right; }
+
+
+  &:last-of-type {
+    position: fixed;
+    display: table;
+    @include horizontal-center;
+    height: 100%;
+    width: $subtitle-last-width;
+    text-align: center;
+    @include animation-duration($subtitle-animation-duration*2);
+    p {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+
+  span {
+    display: block;
+    &:first-of-type { margin-bottom: 1em; }
   }
 }

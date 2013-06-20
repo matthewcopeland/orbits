@@ -8,8 +8,8 @@
   @include animation( orbit $orbit-animation-duration $orbit-animation-delay infinite linear );
 
 
-  @function nth-orbit($base, $i) {
-    @return $base * (1 + .2*$i);
+  @function nth-orbit($x, $i) {
+    @return $x * (1 + .2*$i);
   }
 
 

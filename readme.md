@@ -3,7 +3,11 @@ Orbits
 
 Demo for a stylesheet talk at 2013 ThoughtWorks North America Awayday.
 
-For the working talk, checkout [talk.md](https://github.com/matthewcopeland/orbits/blob/master/talk.md).
+## [Talk / full breakdown] http://matthewcopeland.me/blog/2013/06/10/orbits-choreographing-css-animations-with-sass
+
+## Demos
+* Live demo: http://orbits.matthewcopeland.me
+* Video: http://youtu.be/CI5oZjKps-w
 
 
 ## Setup

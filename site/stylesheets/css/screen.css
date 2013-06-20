@@ -147,6 +147,22 @@ html, body {
   50% {
     opacity: .8; } }
 
+@-webkit-keyframes fadein {
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  to {
+    opacity: 1; } }
+
 body {
   background: #070d10; }
 
@@ -183,7 +199,10 @@ body {
   background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0));
   -webkit-animation: pulse 1.8s 4s alternate infinite linear;
   -moz-animation: pulse 1.8s 4s alternate infinite linear;
-  animation: pulse 1.8s 4s alternate infinite linear; }
+  animation: pulse 1.8s 4s alternate infinite linear;
+  -webkit-animation-direction: forward;
+  -moz-animation-direction: forward;
+  animation-direction: forward; }
 
 .orbit {
   position: fixed;
@@ -284,97 +303,66 @@ body {
   border-radius: 50%;
   background: #006fab; }
 
-@-webkit-keyframes subtitles {
-  to {
-    opacity: 1; } }
-
-@-moz-keyframes subtitles {
-  to {
-    opacity: 1; } }
-
-@-o-keyframes subtitles {
-  to {
-    opacity: 1; } }
-
-@keyframes subtitles {
-  to {
-    opacity: 1; } }
-
 #subtitles {
   display: table;
   width: 100%;
   height: 100%;
-  padding: 0 20px; }
-  #subtitles p {
-    display: table-cell;
-    vertical-align: middle;
-    color: white;
-    font-family: arial;
-    text-align: left;
-    font-size: 51px;
-    opacity: 0; }
-    #subtitles p:nth-of-type(1) {
-      -webkit-animation-name: subtitles;
-      -moz-animation-name: subtitles;
-      animation-name: subtitles;
-      -webkit-animation-duration: 6.32s;
-      -moz-animation-duration: 6.32s;
-      animation-duration: 6.32s;
-      -webkit-animation-delay: 0s;
-      -moz-animation-delay: 0s;
-      animation-delay: 0s; }
-    #subtitles p:nth-of-type(2) {
-      -webkit-animation-name: subtitles;
-      -moz-animation-name: subtitles;
-      animation-name: subtitles;
-      -webkit-animation-duration: 6.32s;
-      -moz-animation-duration: 6.32s;
-      animation-duration: 6.32s;
-      -webkit-animation-delay: 6.32s;
-      -moz-animation-delay: 6.32s;
-      animation-delay: 6.32s; }
-    #subtitles p:nth-of-type(3) {
-      -webkit-animation-name: subtitles;
-      -moz-animation-name: subtitles;
-      animation-name: subtitles;
-      -webkit-animation-duration: 6.32s;
-      -moz-animation-duration: 6.32s;
-      animation-duration: 6.32s;
-      -webkit-animation-delay: 12.64s;
-      -moz-animation-delay: 12.64s;
-      animation-delay: 12.64s; }
-    #subtitles p:nth-of-type(4) {
-      -webkit-animation-name: subtitles;
-      -moz-animation-name: subtitles;
-      animation-name: subtitles;
-      -webkit-animation-duration: 6.32s;
-      -moz-animation-duration: 6.32s;
-      animation-duration: 6.32s;
-      -webkit-animation-delay: 18.96s;
-      -moz-animation-delay: 18.96s;
-      animation-delay: 18.96s; }
-    #subtitles p:nth-of-type(5) {
-      -webkit-animation-name: subtitles;
-      -moz-animation-name: subtitles;
-      animation-name: subtitles;
-      -webkit-animation-duration: 6.32s;
-      -moz-animation-duration: 6.32s;
-      animation-duration: 6.32s;
-      -webkit-animation-delay: 25.28s;
-      -moz-animation-delay: 25.28s;
-      animation-delay: 25.28s; }
-    #subtitles p:nth-of-type(5) {
-      -webkit-animation-duration: 12.64s;
-      -moz-animation-duration: 12.64s;
-      animation-duration: 12.64s; }
-    #subtitles p:nth-of-type(4), #subtitles p:nth-of-type(3) {
-      text-align: right; }
-    #subtitles p:last-of-type {
-      position: fixed;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      top: 30%;
-      width: 12em;
-      text-align: center; }
+  padding: 0 20px;
+  color: white;
+  font-family: arial;
+  text-align: left;
+  font-size: 44px;
+  line-height: 50px; }
+
+.subtitle {
+  display: table-cell;
+  vertical-align: middle;
+  opacity: 0;
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 5.92s;
+  -moz-animation-duration: 5.92s;
+  animation-duration: 5.92s; }
+  .subtitle:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0s; }
+  .subtitle:nth-of-type(2) {
+    -webkit-animation-delay: 5.92s;
+    -moz-animation-delay: 5.92s;
+    animation-delay: 5.92s; }
+  .subtitle:nth-of-type(3) {
+    -webkit-animation-delay: 11.84s;
+    -moz-animation-delay: 11.84s;
+    animation-delay: 11.84s; }
+  .subtitle:nth-of-type(4) {
+    -webkit-animation-delay: 17.76s;
+    -moz-animation-delay: 17.76s;
+    animation-delay: 17.76s; }
+  .subtitle:nth-of-type(5) {
+    -webkit-animation-delay: 23.68s;
+    -moz-animation-delay: 23.68s;
+    animation-delay: 23.68s; }
+  .subtitle:nth-of-type(n+3) {
+    text-align: right; }
+  .subtitle:last-of-type {
+    position: fixed;
+    display: table;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 12em;
+    text-align: center;
+    -webkit-animation-duration: 11.84s;
+    -moz-animation-duration: 11.84s;
+    animation-duration: 11.84s; }
+    .subtitle:last-of-type p {
+      display: table-cell;
+      vertical-align: middle; }
+  .subtitle span {
+    display: block; }
+    .subtitle span:first-of-type {
+      margin-bottom: 1em; }

@@ -1,13 +1,17 @@
 // base
 @import "bourbon/bourbon";
-@import "_utils.scss";
-@import "_color_palette.scss";
-@import "_variables.scss";
+@import "_utils";
+@import "_color_palette";
+@import "_variables";
+@import "_typography";
+
+// ^ nothing above here writes anything
+
 @import "_reset.scss";
 
 
 // keyframe animation definitions
-@import "_orbit_keyframes.scss";
+@import "_keyframe_animations.scss";
 
 
 // elements
