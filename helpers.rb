@@ -11,3 +11,11 @@ def subtitles
     { copy1: "Orbits.", copy2: "These aren't your grandma's stylesheets." },
   ]
 end
+
+
+def links
+  [
+    { copy: "Fork me on github", url: "https://github.com/matthewcopeland/orbits" },
+    { copy: "Back to the article", url: "http://matthewcopeland.me/blog/2013/06/10/orbits-choreographing-css-animations-with-sass" },
+  ]
+end

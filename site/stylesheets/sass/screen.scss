@@ -10,14 +10,15 @@
 @import "_reset.scss";
 
 
+@import "_links"; // github / blog links
+
+
 // keyframe animation definitions
 @import "_keyframe_animations.scss";
 
 
 // elements
 @import "_milkyway.scss";
-
-
 @import "_sun.scss";
 @import "_orbit.scss";
 @import "_planet.scss";

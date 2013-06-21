@@ -2,38 +2,37 @@
 $sun-size: 300px;
 $orbit-size: $sun-size*1.2;
 $planet-size: $sun-size/10;
-$gutter: 20px;
+$subtitle-last-width: 12em;
 
+
+
+// counts
 $orbit-count: 9;
+$subtitle-count: 5;
+$subtitle-half-count: round($subtitle-count/2);
+
+
+
+// layout
+$gutter: 20px;
+$touch-size: 50px;
+$link-z: 1;
+
 
 
 // animation variables
 $zoomin-animation-delay: 0;
 $zoomin-animation-duration: 4s;
 
-
 $pulse-animation-delay: $zoomin-animation-duration + $zoomin-animation-delay;
 $pulse-animation-duration: 1.8s;
-
 
 $orbit-animation-delay: $pulse-animation-delay + $pulse-animation-duration*2;
 $orbit-animation-duration: 3s;
 
-
 $zoomout-animation-delay: $orbit-animation-delay + $orbit-animation-duration*4;
 $zoomout-animation-duration: 10s;
 
+$total-animation-time: $zoomout-animation-delay + $zoomout-animation-duration;
 
-// A little cheat to know the total animation time.
-
-$total-animation-time:
-    $zoomout-animation-delay
-  + $zoomout-animation-duration;
-
-
-
-// Subtitles
-$subtitle-count: 5;
 $subtitle-animation-duration: $total-animation-time/$subtitle-count;
-$subtitle-half-count: round($subtitle-count/2);
-$subtitle-last-width: 12em;

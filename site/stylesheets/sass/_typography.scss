@@ -1,7 +1,21 @@
-@mixin subtitle-type {
+@mixin body-type {
   color: white;
   font-family: arial;
-  text-align: left;
+}
+
+
+@mixin subtitle-type {
   font-size: 44px;
   line-height: 50px;
 }
+
+@mixin link-type {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+html, body, a {
+  @include body-type;
+}
+
+a:hover { text-decoration: none; }

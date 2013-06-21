@@ -1,0 +1,5 @@
+%ul#links
+  - links.each do |link|
+    %li
+      %a.link{href: link[:url]}
+        %p= link[:copy]
