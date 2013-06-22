@@ -127,64 +127,80 @@ html, body {
 
 @-webkit-keyframes orbit {
   25% {
-    -webkit-transform: rotate3d(0, 0, 1, 90deg); }
+    -webkit-transform: rotate(90deg);
+    -webkit-transform: rotate3d(90deg); }
 
   50% {
-    -webkit-transform: rotate3d(0, 0, 1, 180deg); }
+    -webkit-transform: rotate(180deg);
+    -webkit-transform: rotate3d(180deg); }
 
   75% {
-    -webkit-transform: rotate3d(0, 0, 1, 270deg); }
+    -webkit-transform: rotate(270deg);
+    -webkit-transform: rotate3d(270deg); }
 
   100% {
-    -webkit-transform: rotate3d(0, 0, 1, 360deg); }
+    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate3d(360deg); }
 
   50% {
     opacity: .8; } }
 
 @-moz-keyframes orbit {
   25% {
-    -moz-transform: rotate3d(0, 0, 1, 90deg); }
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate3d(90deg); }
 
   50% {
-    -moz-transform: rotate3d(0, 0, 1, 180deg); }
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate3d(180deg); }
 
   75% {
-    -moz-transform: rotate3d(0, 0, 1, 270deg); }
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate3d(270deg); }
 
   100% {
-    -moz-transform: rotate3d(0, 0, 1, 360deg); }
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate3d(360deg); }
 
   50% {
     opacity: .8; } }
 
 @-o-keyframes orbit {
   25% {
-    -o-transform: rotate3d(0, 0, 1, 90deg); }
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate3d(90deg); }
 
   50% {
-    -o-transform: rotate3d(0, 0, 1, 180deg); }
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate3d(180deg); }
 
   75% {
-    -o-transform: rotate3d(0, 0, 1, 270deg); }
+    -o-transform: rotate(270deg);
+    -webkit-transform: rotate3d(270deg); }
 
   100% {
-    -o-transform: rotate3d(0, 0, 1, 360deg); }
+    -o-transform: rotate(360deg);
+    -webkit-transform: rotate3d(360deg); }
 
   50% {
     opacity: .8; } }
 
 @keyframes orbit {
   25% {
-    transform: rotate3d(0, 0, 1, 90deg); }
+    transform: rotate(90deg);
+    -webkit-transform: rotate3d(90deg); }
 
   50% {
-    transform: rotate3d(0, 0, 1, 180deg); }
+    transform: rotate(180deg);
+    -webkit-transform: rotate3d(180deg); }
 
   75% {
-    transform: rotate3d(0, 0, 1, 270deg); }
+    transform: rotate(270deg);
+    -webkit-transform: rotate3d(270deg); }
 
   100% {
-    transform: rotate3d(0, 0, 1, 360deg); }
+    transform: rotate(360deg);
+    -webkit-transform: rotate3d(360deg); }
 
   50% {
     opacity: .8; } }
