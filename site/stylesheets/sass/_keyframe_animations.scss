@@ -29,7 +29,7 @@
   @for $i from 1 through $rotation-keyframe-count {
     #{$i * (100%/$rotation-keyframe-count)} {
       @include transform( rotate(#{$i*$rotation-keyframe-value}deg) );
-      -webkit-transform: rotate3d(#{$i*$rotation-keyframe-value}deg);
+      -webkit-transform: rotate3d(0,0,1, #{$i*$rotation-keyframe-value}deg);
       // @include transform( rotate3d(0,0,1, #{$i*$rotation-keyframe-value}deg) ); // moz doesn't like this
     }
   }

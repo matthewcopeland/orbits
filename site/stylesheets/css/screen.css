@@ -128,19 +128,19 @@ html, body {
 @-webkit-keyframes orbit {
   25% {
     -webkit-transform: rotate(90deg);
-    -webkit-transform: rotate3d(90deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
     -webkit-transform: rotate(180deg);
-    -webkit-transform: rotate3d(180deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 180deg); }
 
   75% {
     -webkit-transform: rotate(270deg);
-    -webkit-transform: rotate3d(270deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 270deg); }
 
   100% {
     -webkit-transform: rotate(360deg);
-    -webkit-transform: rotate3d(360deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 360deg); }
 
   50% {
     opacity: .8; } }
@@ -148,19 +148,19 @@ html, body {
 @-moz-keyframes orbit {
   25% {
     -moz-transform: rotate(90deg);
-    -webkit-transform: rotate3d(90deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
     -moz-transform: rotate(180deg);
-    -webkit-transform: rotate3d(180deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 180deg); }
 
   75% {
     -moz-transform: rotate(270deg);
-    -webkit-transform: rotate3d(270deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 270deg); }
 
   100% {
     -moz-transform: rotate(360deg);
-    -webkit-transform: rotate3d(360deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 360deg); }
 
   50% {
     opacity: .8; } }
@@ -168,19 +168,19 @@ html, body {
 @-o-keyframes orbit {
   25% {
     -o-transform: rotate(90deg);
-    -webkit-transform: rotate3d(90deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
     -o-transform: rotate(180deg);
-    -webkit-transform: rotate3d(180deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 180deg); }
 
   75% {
     -o-transform: rotate(270deg);
-    -webkit-transform: rotate3d(270deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 270deg); }
 
   100% {
     -o-transform: rotate(360deg);
-    -webkit-transform: rotate3d(360deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 360deg); }
 
   50% {
     opacity: .8; } }
@@ -188,19 +188,19 @@ html, body {
 @keyframes orbit {
   25% {
     transform: rotate(90deg);
-    -webkit-transform: rotate3d(90deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 90deg); }
 
   50% {
     transform: rotate(180deg);
-    -webkit-transform: rotate3d(180deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 180deg); }
 
   75% {
     transform: rotate(270deg);
-    -webkit-transform: rotate3d(270deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 270deg); }
 
   100% {
     transform: rotate(360deg);
-    -webkit-transform: rotate3d(360deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 360deg); }
 
   50% {
     opacity: .8; } }
