@@ -4,23 +4,19 @@
   to { @include transform( scale(0.9) ); }
 }
 
-
-
-// zoominim keyframe animation
-//-------------------------------
 @include keyframes(zoomin) {
   from { @include transform( scale(0) ); }
   to { @include transform( scale(1) ); }
 }
-
-
 
 @include keyframes(zoomout) {
   from { @include transform( scale(1) ); }
   to { @include transform( scale(0) ); }
 }
 
-
+@include keyframes(fadein) {
+  to { opacity: 1; }
+}
 
 @include keyframes(orbit) {
   $rotation-keyframe-count: 4;
@@ -29,14 +25,8 @@
   @for $i from 1 through $rotation-keyframe-count {
     #{$i * (100%/$rotation-keyframe-count)} {
       @include transform( rotate(#{$i*$rotation-keyframe-value}deg) );
-      -webkit-transform: rotate3d(0,0,1, #{$i*$rotation-keyframe-value}deg);
-      // @include transform( rotate3d(0,0,1, #{$i*$rotation-keyframe-value}deg) ); // moz doesn't like this
+      -webkit-transform: rotate3d(0,0,1, #{$i*$rotation-keyframe-value}deg); // webkit optimized
     }
   }
   50% { opacity: .8; }
-}
-
-
-@include keyframes(fadein) {
-  to { opacity: 1; }
 }

@@ -125,6 +125,22 @@ html, body {
   to {
     transform: scale(0); } }
 
+@-webkit-keyframes fadein {
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  to {
+    opacity: 1; } }
+
 @-webkit-keyframes orbit {
   25% {
     -webkit-transform: rotate(90deg);
@@ -205,22 +221,6 @@ html, body {
   50% {
     opacity: .8; } }
 
-@-webkit-keyframes fadein {
-  to {
-    opacity: 1; } }
-
-@-moz-keyframes fadein {
-  to {
-    opacity: 1; } }
-
-@-o-keyframes fadein {
-  to {
-    opacity: 1; } }
-
-@keyframes fadein {
-  to {
-    opacity: 1; } }
-
 body {
   background: #070d10; }
 
@@ -253,8 +253,8 @@ body {
   width: 300px;
   border-radius: 50%;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #f59f1a), color-stop(100%, rgba(245, 159, 26, 0)));
-  background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #f59f1a, rgba(245, 159, 26, 0));
-  background-image: radial-gradient( circle closest-side at 50% 50%, #f59f1a, rgba(245, 159, 26, 0));
+  background-image: -webkit-radial-gradient(center center, circle closest-side, #f59f1a, rgba(245, 159, 26, 0));
+  background-image: radial-gradient( circle closest-side at center center, #f59f1a, rgba(245, 159, 26, 0));
   -webkit-animation: pulse 1.8s 4s alternate infinite linear;
   -moz-animation: pulse 1.8s 4s alternate infinite linear;
   animation: pulse 1.8s 4s alternate infinite linear;
